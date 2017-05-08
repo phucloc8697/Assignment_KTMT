@@ -1,0 +1,252 @@
+module CONTROL (
+	opcode,
+	control_exe,
+	control_mem,
+	control_wb,
+	control_jump,
+	control_exception
+);
+
+input [5:0] opcode;
+
+output [3:0] control_exe;
+output [2:0] control_mem;
+output [1:0] control_wb;
+output control_jump, control_exception;
+
+reg RegDst, RegWrite, ALUsrc, Exception, Mem2Reg, MemWrite, MemRead, Branch, Jump;
+reg [1:0] ALUop;
+
+assign control_exe[0] = RegDst;
+assign control_exe[1] = ALUsrc;
+assign control_exe[3:2] = ALUop;
+
+assign control_mem[0] = MemRead;
+assign control_mem[1] = MemWrite;
+assign control_mem[2] = Branch;
+
+assign control_wb[0] = RegWrite;
+assign control_wb[1] = Mem2Reg;
+
+always@(*) begin
+
+	case (opcode[5:0])
+
+		// Lenh R
+		6'd0: begin
+			RegDst = 1;
+			RegWrite = 1;
+			ALUsrc = 0;
+			Exception = 0;
+			ALUop = 2'b10;
+			Mem2Reg = 0;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// addi
+		6'd8: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b10;
+			Mem2Reg = 0;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// lbu
+		6'd36: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1;
+			MemWrite = 0;
+			MemRead = 1;
+			Branch = 0;
+			Jump = 0;
+		end
+		// lb
+		6'd32: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1;
+			MemWrite = 0;
+			MemRead = 1;
+			Branch = 0;
+			Jump = 0;
+		end
+		// lw
+		6'd35: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1;
+			MemWrite = 0;
+			MemRead = 1;
+			Branch = 0;
+			Jump = 0;
+		end
+		// sb
+		6'd40: begin
+			RegDst = 1'bx;
+			RegWrite = 0;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1'bx;
+			MemWrite = 1;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// slti
+		6'd10: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b10;
+			Mem2Reg = 0;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// andi
+		6'd12: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b10;
+			Mem2Reg = 0;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// beq
+		6'd4: begin
+			RegDst = 1'bx;
+			RegWrite = 0;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b01;
+			Mem2Reg = 2'bx;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 1;
+			Jump = 0;
+		end
+		// lhu
+		6'd37: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1;
+			MemWrite = 0;
+			MemRead = 1;
+			Branch = 0;
+			Jump = 0;
+		end
+		// lh
+		6'd32: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1;
+			MemWrite = 0;
+			MemRead = 1;
+			Branch = 0;
+			Jump = 0;
+		end
+		// sw
+		6'd43: begin
+			RegDst = 1'bx;
+			RegWrite = 0;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1'bx;
+			MemWrite = 1;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// sh
+		6'd41: begin
+			RegDst = 1'bx;
+			RegWrite = 0;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b00;
+			Mem2Reg = 1'bx;
+			MemWrite = 1;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// sltiu
+		6'd11: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b10;
+			Mem2Reg = 0;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// ori
+		6'd13: begin
+			RegDst = 0;
+			RegWrite = 1;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b10;
+			Mem2Reg = 0;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+		end
+		// bne
+		6'd5: begin
+			RegDst = 1'bx;
+			RegWrite = 0;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b01;
+			Mem2Reg = 1'bx;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 1;
+			Jump = 0;
+		end
+		
+		default: begin
+			Exception = 1;
+		end
+			
+	endcase
+
+end
+
+endmodule

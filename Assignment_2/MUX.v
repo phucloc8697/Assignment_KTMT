@@ -1,9 +1,13 @@
 module MUX (
-	input in0,
-	input in1,
-	input sel,
-	output out
+	in0,
+	in1,
+	sel,
+	out
 );
+
+input [31:0] in0, in1;
+input sel;
+output [31:0] out;
 
 assign out = (sel) ? in1 : in0;
 

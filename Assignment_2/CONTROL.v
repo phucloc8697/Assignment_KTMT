@@ -6,7 +6,7 @@ module CONTROL (
 	control_jump,
 	control_exception
 );
-
+// asdasdasd
 input [5:0] opcode;
 
 output [3:0] control_exe;

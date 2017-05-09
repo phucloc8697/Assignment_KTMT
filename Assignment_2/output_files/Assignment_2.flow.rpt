@@ -1,5 +1,5 @@
 Flow report for Assignment_2
-Mon May 08 14:20:23 2017
+Tue May 09 15:54:55 2017
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon May 08 14:20:23 2017       ;
+; Flow Status                        ; Successful - Tue May 09 15:54:55 2017       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; Assignment_2                                ;
 ; Top-level Entity Name              ; SYSTEM                                      ;
 ; Family                             ; Cyclone IV GX                               ;
 ; Device                             ; EP4CGX150DF31C7                             ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 0 / 149,760 ( 0 % )                         ;
-;     Total combinational functions  ; 0 / 149,760 ( 0 % )                         ;
+; Total logic elements               ; 97 / 149,760 ( < 1 % )                      ;
+;     Total combinational functions  ; 97 / 149,760 ( < 1 % )                      ;
 ;     Dedicated logic registers      ; 0 / 149,760 ( 0 % )                         ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 46 / 508 ( 9 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0 / 6,635,520 ( 0 % )                       ;
+; Total memory bits                  ; 6,912 / 6,635,520 ( < 1 % )                 ;
 ; Embedded Multiplier 9-bit elements ; 0 / 720 ( 0 % )                             ;
 ; Total GXB Receiver Channel PCS     ; 0 / 8 ( 0 % )                               ;
 ; Total GXB Receiver Channel PMA     ; 0 / 8 ( 0 % )                               ;
@@ -69,34 +69,42 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/08/2017 14:19:34 ;
+; Start date & time ; 05/09/2017 15:54:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Assignment_2        ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                           ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 9218722839026.149422797410276         ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                  ; --            ; --          ; eda_simulation ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
-; MISC_FILE                           ; IMEM_RAM_inst.v                       ; --            ; --          ; --             ;
-; MISC_FILE                           ; IMEM_RAM_bb.v                         ; --            ; --          ; --             ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                  ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; SYSTEM      ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; SYSTEM      ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; SYSTEM      ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; SYSTEM                                ; Assignment_2  ; --          ; --             ;
-+-------------------------------------+---------------------------------------+---------------+-------------+----------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                            ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID                ; 154880085086300.149432004408004       ; --            ; --          ; --             ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; t_IMEM         ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; t_IMEM                                ; --            ; --          ; eda_simulation ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                           ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)             ; <None>        ; --          ; --             ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                       ; --            ; --          ; eda_simulation ;
+; EDA_TEST_BENCH_FILE                  ; t_IMEM.v                              ; --            ; --          ; t_IMEM         ;
+; EDA_TEST_BENCH_MODULE_NAME           ; t_IMEM                                ; --            ; --          ; t_IMEM         ;
+; EDA_TEST_BENCH_NAME                  ; t_IMEM                                ; --            ; --          ; eda_simulation ;
+; EDA_TIME_SCALE                       ; 1 ps                                  ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                     ; --            ; --          ; --             ;
+; MISC_FILE                            ; IMEM_RAM_inst.v                       ; --            ; --          ; --             ;
+; MISC_FILE                            ; IMEM_RAM_bb.v                         ; --            ; --          ; --             ;
+; MISC_FILE                            ; IMEM_BRAM_inst.v                      ; --            ; --          ; --             ;
+; MISC_FILE                            ; IMEM_BRAM_bb.v                        ; --            ; --          ; --             ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE          ; 1.2V                                  ; --            ; --          ; --             ;
+; PARTITION_COLOR                      ; 16764057                              ; --            ; SYSTEM      ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; PLACEMENT_AND_ROUTING                 ; --            ; SYSTEM      ; Top            ;
+; PARTITION_NETLIST_TYPE               ; SOURCE                                ; --            ; SYSTEM      ; Top            ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                          ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                     ; SYSTEM                                ; Assignment_2  ; --          ; --             ;
++--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -104,12 +112,12 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:16     ; 1.0                     ; 911 MB              ; 00:00:36                           ;
-; Fitter                    ; 00:00:19     ; 1.0                     ; 1684 MB             ; 00:00:29                           ;
-; Assembler                 ; 00:00:05     ; 1.0                     ; 847 MB              ; 00:00:05                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 965 MB              ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 815 MB              ; 00:00:01                           ;
-; Total                     ; 00:00:44     ; --                      ; --                  ; 00:01:13                           ;
+; Analysis & Synthesis      ; 00:00:17     ; 1.0                     ; 913 MB              ; 00:00:40                           ;
+; Fitter                    ; 00:00:19     ; 1.0                     ; 1505 MB             ; 00:00:24                           ;
+; Assembler                 ; 00:00:05     ; 1.0                     ; 841 MB              ; 00:00:05                           ;
+; TimeQuest Timing Analyzer ; 00:00:02     ; 1.0                     ; 939 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 811 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:45     ; --                      ; --                  ; 00:01:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -118,11 +126,11 @@ agreement for further details.
 +---------------------------+------------------+-----------+------------+----------------+
 ; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +---------------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis      ; DESKTOP-LIDNJBO  ; Windows 8 ; 6.2        ; x86_64         ;
-; Fitter                    ; DESKTOP-LIDNJBO  ; Windows 8 ; 6.2        ; x86_64         ;
-; Assembler                 ; DESKTOP-LIDNJBO  ; Windows 8 ; 6.2        ; x86_64         ;
-; TimeQuest Timing Analyzer ; DESKTOP-LIDNJBO  ; Windows 8 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; DESKTOP-LIDNJBO  ; Windows 8 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis      ; DESKTOP-5BI5H1L  ; Windows 8 ; 6.2        ; x86_64         ;
+; Fitter                    ; DESKTOP-5BI5H1L  ; Windows 8 ; 6.2        ; x86_64         ;
+; Assembler                 ; DESKTOP-5BI5H1L  ; Windows 8 ; 6.2        ; x86_64         ;
+; TimeQuest Timing Analyzer ; DESKTOP-5BI5H1L  ; Windows 8 ; 6.2        ; x86_64         ;
+; EDA Netlist Writer        ; DESKTOP-5BI5H1L  ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 

@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Luong Anh/Desktop/ktmt/Assignment_2/simulation/modelsim
+vIMEM
+Z1 !s110 1494318720
+!i10b 1
+!s100 H;KPg@@k0;k<7LJ]UeiFg3
+I`cJ1Hbf@l`SV[6mG<JHXK0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1494316608
+8C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v
+FC:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v
+L0 1
+Z3 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z4 !s108 1494318720.000000
+!s107 C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Luong Anh/Desktop/ktmt/Assignment_2|C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v|
+!i113 1
+Z5 o-vlog01compat -work work
+Z6 !s92 -vlog01compat -work work {+incdir+C:/Users/Luong Anh/Desktop/ktmt/Assignment_2}
+n@i@m@e@m
+vIMEM_BRAM
+R1
+!i10b 1
+!s100 co2>VKQJ9[fTL6IH5hEkS0
+IRZ:ZJ]L@9m42me@kg14n]1
+R2
+R0
+w1494314190
+8C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+FC:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+L0 40
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Luong Anh/Desktop/ktmt/Assignment_2|C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v|
+!i113 1
+R5
+R6
+n@i@m@e@m_@b@r@a@m
+vt_IMEM
+R1
+!i10b 1
+!s100 hX^U1TOBS_;4DO703EJ<43
+IdKMR59U<9Db6;SiE7nN>h2
+R2
+R0
+w1494316904
+8C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/t_IMEM.v
+FC:/Users/Luong Anh/Desktop/ktmt/Assignment_2/t_IMEM.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/t_IMEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/Luong Anh/Desktop/ktmt/Assignment_2|C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/t_IMEM.v|
+!i113 1
+R5
+R6
+nt_@i@m@e@m

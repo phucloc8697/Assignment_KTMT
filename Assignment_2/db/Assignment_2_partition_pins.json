@@ -2,7 +2,184 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "SYS_leds[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[8]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[9]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[10]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[11]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[12]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[13]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[14]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[15]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[16]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[17]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[18]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[19]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[20]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[21]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[22]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[23]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[24]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[25]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_leds[26]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_output_sel[7]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_reset",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[0]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[1]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[2]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[3]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[4]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[5]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[6]",
+					"strict" : false
+				},
+				{
+					"name" : "SYS_pc_val[7]",
+					"strict" : false
+				}
+			]
 		}
 	]
 }

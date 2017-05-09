@@ -1,0 +1,17 @@
+`timescale 1ns/1ns
+module t_IMEM;
+	reg clk;
+	reg [7:0] addr;
+	output out;
+	IMEM f( 	.CLK(clk),
+				.MEM_PC(addr),
+				.IMEM_instruction(out)
+	);
+	initial begin
+		clk=0;
+		forever #10 clk=~clk;
+	end
+	initial begin
+	
+	end
+endmodule 

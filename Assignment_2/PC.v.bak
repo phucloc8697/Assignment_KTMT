@@ -1,0 +1,17 @@
+module PC ( CLK, RESET, PC_val, PC_in, PC_out);
+	input CLK,RESET;
+	input [7:0] PC_in,PC_val;
+	output [7:0] PC_out;
+	reg [7:0] PC;
+	
+	always @(posedge CLK or negedge RESET) begin
+		if(!RESET) begin
+			PC <= PC_val;
+		end
+		else begin
+			PC <= PC_in;
+		end
+		PC_out <= PC_out;
+	end
+
+endmodule 

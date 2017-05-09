@@ -10,9 +10,8 @@ module SYSTEM (
 input SYS_clk, SYS_reset, SYS_load;
 input [7:0] SYS_pc_val, SYS_output_sel;
 
-output [26:0] SYS_leds;
+output reg [26:0] SYS_leds;
 
-reg [7:0] PC;
 
 // Khoi IF
 wire [31:0] w_inst_val;
@@ -73,6 +72,14 @@ wire [31:0] w_adder_jump,
 wire [27:0] w_shift_left0;
 wire [7:0]	w_mux1;
 
+
+PC PC( 	
+	.CLK(SYS_clock),
+	.RESET(SYS_reset), 
+	.PC_val(SYS_pc_val), 
+	.PC_in(w_mux0), 
+	.PC_out(w_inst_address)
+);
 IMEM IMEM (
 	.CLK(SYS_clock), 
 	.MEM_PC(w_inst_address), 
@@ -147,7 +154,7 @@ REG_ID_EXE (
 	.read_data_2_out(w_read_data2_exe),
 	.sign_extend_out(w_sign_extend_exe),
 	.rt_out(w_rt_exe),
-	.rd_out(w_rd_exe),
+	.rd_out(w_rd_exe)
 );
 REG_EXE_MEM REG_EXE_MEM (
 	.CLK(SYS_clock),
@@ -238,4 +245,16 @@ AND_BRANCH AND_BRANCH (
 	.out(w_branch)
 );
 
+always @(*) begin
+	case(SYS_output_sel[7:0])
+		//8'd0: 
+		8'd1: SYS_leds = w_inst_val	;
+		8'd2: SYS_leds = w_read_data1	;
+		8'd3: SYS_leds = w_read_data2	;
+		8'd4: SYS_leds = w_alu_result	;
+		8'd5: SYS_leds = w_mem_data	;
+		//default:
+	endcase
+end
+		
 endmodule

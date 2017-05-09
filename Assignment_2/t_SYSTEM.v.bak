@@ -1,0 +1,11 @@
+`timescale 1ns/1ns
+module t_SYSTEM;
+	reg 
+	SYSTEM f(
+	.SYS_clk(),
+	.SYS_reset(),
+	.SYS_load(),
+	.SYS_pc_val(),
+	.SYS_output_sel(),
+	.SYS_leds()
+	);

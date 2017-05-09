@@ -150,91 +150,92 @@ REG_ID_EXE (
 	.rd_out(w_rd_exe),
 );
 REG_EXE_MEM REG_EXE_MEM (
-	.CLK(),
-	.exception_disable(),
+	.CLK(SYS_clock),
+	.exception_disable(w_exception),
 
-	.control_mem_in(),
-	.control_wb_in(),
-	.branch_address_in(),
-	.ALU_status_in(),
-	.ALU_result_in(),
-	.read_data_2_in(),
-	.reg_dst_address_in(),
+	.control_mem_in(w_control_mem_exe),
+	.control_wb_in(w_control_wb_exe),
+	.branch_address_in(w_inst_adder1),
+	.ALU_status_in(w_alu_status),
+	.ALU_result_in(w_alu_result),
+	.read_data_2_in(w_read_data2_exe),
+	.reg_dst_address_in(w_regDest),
 	
-	.control_mem_out(),
-	.control_wb_out(),
-	.branch_address_out(),
-	.ALU_status_out(),
-	.ALU_result_out(),
-	.read_data_2_out(),
-	.reg_dst_address_out()
+	.control_mem_out(w_control_mem_mem),
+	.control_wb_out(w_control_wb_mem),
+	.branch_address_out(w_inst_address_mem),
+	.ALU_status_out(w_alu_status_mem),
+	.ALU_result_out(w_alu_result_mem),
+	.read_data_2_out(w_read_data2_mem),
+	.reg_dst_address_out(w_regDest_mem)
 );
 REG_MEM_WB REG_MEM_WB (
-	.CLK(),
+	.CLK(SYS_clock),
 	
-	.control_wb_in(),
-	.read_data_in(),
-	.ALU_result_in(),
-	.reg_dst_address_in(),
+	.control_wb_in(w_control_wb_mem),
+	.read_data_in(w_mem_data),
+	.ALU_result_in(w_alu_result_mem),
+	.reg_dst_address_in(w_regDest_mem),
 	
-	.control_wb_out(),
-	.read_data_out(),
-	.ALU_result_out(),
-	.reg_dst_address_out()
+	.control_wb_out(w_control_wb_out),
+	.read_data_out(w_mem_data_wb),
+	.ALU_result_out(w_alu_result_wb),
+	.reg_dst_address_out(w_regDest_wb)
 );
 
 MUX MUX_0 (
-	.in0(),
-	.in1(),
-	.sel(),
-	.out()
+	.in0(w_mux1),
+	.in1(w_adder_jump),
+	.sel(w_control_jump),
+	.out(w_mux0)
 );
 MUX MUX_1 (
-	.in0(),
-	.in1(),
-	.sel(),
+	.in0(w_inst_adder0),
+	.in1(w_inst_address_mem),
+	.sel(w_branch),
 	.out()
 );
 MUX MUX_2 (
-	.in0(),
-	.in1(),
-	.sel(),
-	.out()
+	.in0(w_read_data2_exe),
+	.in1(w_sign_extend_exe),
+	.sel(w_control_exe_exe[1]),
+	.out(w_mux2)
 );
 MUX MUX_3 (
-	.in0(),
-	.in1(),
-	.sel(),
-	.out()
+	.in0(w_rt_exe),
+	.in1(w_rd_exe),
+	.sel(w_control_exe_exe[0]),
+	.out(w_regDest)
 );
 MUX MUX_4 (
-	.in0(),
-	.in1(),
-	.sel(),
-	.out()
+	.in0(w_mem_data_wb),
+	.in1(w_alu_result_wb),
+	.sel(w_control_wb_wb[1]),
+	.out(w_mux4)
 );
 SHIFT_LEFT_2 SL_0 (
-	.in(),
-	.out()
+	.in(w_inst_val_id),
+	.out(w_shift_left0)
 );
 SHIFT_LEFT_2 SL_1 (
-	.in(),
-	.out()
+	.in(w_sign_extend_exe),
+	.out(w_shift_left1)
 );
 ADDER ADDER_0 (
 	.in0(w_inst_address),
 	.in1(8'd4),
 	.out(w_inst_adder0)
 );
+// Can xem lai cho nay, 1 cai 8 bit 1 cai 32 bit ?
 ADDER ADDER_1 (
-	.in0(),
-	.in1(),
-	.out()
+	.in0(w_shift_left1),
+	.in1(w_inst_address_exe),
+	.out(w_inst_adder1)
 );
 AND_BRANCH AND_BRANCH (
-	.ALU_status(),
-	.control_branch(),
-	.out()
+	.ALU_status(w_alu_status_mem),
+	.control_branch(w_control_mem_mem[2]),
+	.out(w_branch)
 );
 
 endmodule

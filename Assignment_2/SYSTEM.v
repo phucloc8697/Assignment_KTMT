@@ -4,7 +4,32 @@ module SYSTEM (
 	SYS_load,
 	SYS_pc_val,
 	SYS_output_sel,
-	SYS_leds
+	SYS_leds,
+	
+	w_inst_address,
+	w_inst_val,
+	w_inst_val_id,
+	w_read_data1,
+	w_read_data2,
+	w_sign_extend,
+	
+	w_control_exe,
+	w_control_mem,
+	w_control_wb,
+	
+	w_control_exe_exe,
+	w_control_mem_exe,
+	w_control_wb_exe,
+	w_alu_op_exe,
+	w_read_data1_exe,
+	w_read_data2_exe,
+	w_sign_extend_exe,
+	w_rt_exe,
+	w_rd_exe,
+	
+	w_alu_result,
+	w_alu_status,
+	w_alu_control
 );
 
 input SYS_clk, SYS_reset, SYS_load;
@@ -14,40 +39,43 @@ output reg [26:0] SYS_leds;
 
 
 // Khoi IF
-wire [31:0] w_inst_val;
-wire [7:0] 	w_inst_address,
-				w_inst_adder0;
+output  [31:0] w_inst_val;
+output  [7:0] 	w_inst_address;
+wire [7:0]		w_inst_adder0;
 // Khoi ID
-wire [31:0] w_inst_val_id,
+output [31:0] w_inst_val_id,
 				w_read_data1,
 				w_read_data2,
 				w_sign_extend;
 wire [7:0] 	w_inst_address_id;
 wire [4:0]	w_rt,
 				w_rd;
-wire [3:0] 	w_control_mem;
-wire [2:0] 	w_control_exe;
-wire [1:0] 	w_control_wb;
+output [2:0] 	w_control_mem;
+output [3:0] w_control_exe;
+output [1:0] 	w_control_wb;
 wire 			w_control_jump,
 				w_control_exception;
 // Khoi EXE
 wire [31:0] w_regDest,
-				w_read_data1_exe,
-				w_read_data2_exe,
-				w_sign_extend_exe,
+			//	w_read_data1_exe,
+			//	w_read_data2_exe,
+			//	w_sign_extend_exe,
 				w_shift_left1,
-				w_mux2,
-				w_alu_result;
+				w_mux2;
+output [31:0]				w_alu_result;
+output [31:0] w_read_data1_exe,
+					w_read_data2_exe,
+					w_sign_extend_exe;
 wire [7:0]	w_inst_address_exe,
-				w_inst_adder1,
-				w_alu_status;
-wire [5:0]	w_alu_op_exe;
-wire [4:0]	w_rt_exe,
+				w_inst_adder1;
+output [7:0]		w_alu_status;
+output [5:0]	w_alu_op_exe;
+output [4:0]	w_rt_exe,
 				w_rd_exe;
-wire [3:0] 	w_control_exe_exe,
-				w_alu_control;
-wire [2:0] 	w_control_mem_exe;
-wire [1:0] 	w_control_wb_exe;
+output [3:0] 	w_control_exe_exe;
+output	[3:0]			w_alu_control;
+output [2:0] 	w_control_mem_exe;
+output [1:0] 	w_control_wb_exe;
 wire 			w_alu_exception,
 				w_exception;
 // Khoi MEM
@@ -74,19 +102,20 @@ wire [7:0]	w_mux1;
 
 
 PC PC( 	
-	.CLK(SYS_clock),
+	.CLK(SYS_clk),
 	.RESET(SYS_reset), 
 	.PC_val(SYS_pc_val), 
 	.PC_in(w_mux0), 
 	.PC_out(w_inst_address)
 );
 IMEM IMEM (
-	.CLK(SYS_clock), 
+	.CLK(SYS_clk), 
 	.MEM_PC(w_inst_address), 
 	.IMEM_instruction(w_inst_val)
 );
 REG REG (
-	.CLK(SYS_clock),
+	.CLK(SYS_clk),
+	.RESET(SYS_reset),
 	.REG_address1(w_inst_val_id[25:21]),
 	.REG_address2(w_inst_val_id[20:16]),
 	.REG_address_wr(w_regDest_wb),
@@ -96,7 +125,7 @@ REG REG (
 	.REG_data_out2(w_read_data2)
 );
 DMEM DMEM (
-	.CLK(SYS_clock),
+	.CLK(SYS_clk),
 	.DMEM_address(w_alu_result_mem),
 	.DMEM_data_in(w_read_data2_mem),
 	.DMEM_mem_write(w_control_mem_mem[1]),
@@ -111,6 +140,10 @@ CONTROL CONTROL (
 	.control_jump(w_control_jump),
 	.control_exception(w_control_exception)
 );
+SIGN_EXTEND SIGN_EXTEND(
+	.in(w_inst_val_id[15:0]),
+	.out(w_sign_extend)
+);
 ALU ALU (
 	.ALU_control(w_alu_control),
 	.ALU_operand_1(w_read_data1_exe),
@@ -119,20 +152,20 @@ ALU ALU (
 	.ALU_status(w_alu_status)
 );
 ALU_CONTROL ALU_CONTROL(
-	.ALU_op(w_alu_op_exe),
-	.Funct(w_sign_extend_exe[5:0]),
+	.ALU_op(w_control_exe_exe[3:2]),
+	.Funct(w_alu_op_exe),
 	.ALU_control(w_alu_control)
 );
 
-REG_IF_ID (
-	.CLK(SYS_clock),
+REG_IF_ID REG_IF_ID(
+	.CLK(SYS_clk),
 	.pc_address_in(w_inst_adder0),
 	.instruction_in(w_inst_val),
 	.pc_address_out(w_inst_address_id),
 	.instruction_out(w_inst_val_id)
 );
-REG_ID_EXE (
-	.CLK(SYS_clock),
+REG_ID_EXE REG_ID_EXE(
+	.CLK(SYS_clk),
 	
 	.control_exe_in(w_control_exe),
 	.control_mem_in(w_control_mem),
@@ -157,7 +190,7 @@ REG_ID_EXE (
 	.rd_out(w_rd_exe)
 );
 REG_EXE_MEM REG_EXE_MEM (
-	.CLK(SYS_clock),
+	.CLK(SYS_clk),
 	.exception_disable(w_exception),
 
 	.control_mem_in(w_control_mem_exe),
@@ -177,7 +210,7 @@ REG_EXE_MEM REG_EXE_MEM (
 	.reg_dst_address_out(w_regDest_mem)
 );
 REG_MEM_WB REG_MEM_WB (
-	.CLK(SYS_clock),
+	.CLK(SYS_clk),
 	
 	.control_wb_in(w_control_wb_mem),
 	.read_data_in(w_mem_data),

@@ -4,19 +4,54 @@ module t_SYSTEM;
 	reg [7:0] pc;
 	reg [7:0] sel;
 	wire [27:0] led;
+	wire [7:0] w_inst_address,w_alu_status;
+	wire [31:0] w_inst_val,w_inst_val_id,w_read_data1,w_read_data2,w_sign_extend,w_read_data1_exe,w_read_data2_exe,w_sign_extend_exe,w_alu_result;
+	wire [3:0] w_control_exe,w_control_exe_exe,w_alu_control;
+	wire [2:0] w_control_mem,w_control_mem_exe;
+	wire [1:0] w_control_wb,w_control_wb_exe;
+	wire [5:0] w_alu_op_exe;
+	wire [4:0] w_rt_exe,w_rd_exe;
 	SYSTEM f(
 	.SYS_clk(clk),
 	.SYS_reset(rst),
 	.SYS_load(load),
 	.SYS_pc_val(pc),
 	.SYS_output_sel(sel),
-	.SYS_leds(led)
-	);
+	.SYS_leds(led),
+	
+	.w_inst_address(w_inst_address),
+	.w_inst_val(w_inst_val),
+	.w_inst_val_id(w_inst_val_id),
+	.w_read_data1(w_read_data1),
+	.w_read_data2(w_read_data2),
+	.w_sign_extend(w_sign_extend),
+	
+	.w_control_exe(w_control_exe),
+	.w_control_mem(w_control_mem),
+	.w_control_wb(w_control_wb),
+	
+	.w_control_exe_exe(w_control_exe_exe),
+	.w_control_mem_exe(w_control_mem_exe),
+	.w_control_wb_exe(w_control_wb_exe),
+	.w_alu_op_exe(w_alu_op_exe),
+	.w_read_data1_exe(w_read_data1_exe),
+	.w_read_data2_exe(w_read_data2_exe),
+	.w_sign_extend_exe(w_sign_extend_exe),
+	.w_rt_exe(w_rt_exe),
+	.w_rd_exe(w_rd_exe),
+	
+	.w_alu_result(w_alu_result),
+	.w_alu_status(w_alu_status),
+	.w_alu_control(w_alu_control)
+);
 	initial begin
 		clk=0;
 		forever #10 clk=~clk;
 	end
 	initial begin
-	
+		rst=1;
+		pc=8'd0;
+		#5 rst=0;
+		#10 rst=1;
 	end
 endmodule 

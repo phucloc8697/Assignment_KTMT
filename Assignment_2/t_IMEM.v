@@ -12,8 +12,8 @@ module t_IMEM;
 		forever #10 clk=~clk;
 	end
 	initial begin
-		#5 addr = 8'd10;
-		#5 addr = 8'd0;
-		#5 addr = 8'd1;
+		  addr = 8'd0;
+		#15 addr = 8'd4;
+		#15 addr =8'd8;
 	end
 endmodule 

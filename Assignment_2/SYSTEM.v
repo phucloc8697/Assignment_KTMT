@@ -26,12 +26,21 @@ module SYSTEM (
 	w_sign_extend_exe,
 	w_rt_exe,
 	w_rd_exe,
+	w_inst_address_exe,
 	
 	w_alu_result,
 	w_alu_status,
 	w_alu_control,
 	w_mux2,
-	w_mux0
+	w_mux0,
+	
+	w_control_mem_mem,
+	w_control_wb_mem,
+	w_inst_address_mem,
+	w_alu_status_mem,
+	w_alu_result_mem,
+	w_read_data2_mem,
+	w_regDest_mem
 );
 
 input SYS_clk, SYS_reset, SYS_load;
@@ -68,8 +77,8 @@ output [31:0]				w_alu_result;
 output [31:0] w_read_data1_exe,
 					w_read_data2_exe,
 					w_sign_extend_exe;
-wire [7:0]	w_inst_address_exe,
-				w_inst_adder1;
+wire [7:0]				w_inst_adder1;
+output [7:0] w_inst_address_exe;
 output [7:0]		w_alu_status;
 output [5:0]	w_alu_op_exe;
 output [4:0]	w_rt_exe,
@@ -81,14 +90,15 @@ output [1:0] 	w_control_wb_exe;
 wire 			w_alu_exception,
 				w_exception;
 // Khoi MEM
-wire [31:0] w_alu_result_mem,
-				w_read_data2_mem,
-				w_mem_data;
-wire [7:0] 	w_alu_status_mem,
-				w_ins_address_mem;
-wire [4:0]	w_regDest_mem;
-wire [2:0]	w_control_mem_mem;
-wire [1:0]	w_control_wb_mem;
+output  [31:0] w_read_data2_mem;
+wire [31:0]				w_mem_data;
+output [31:0] w_alu_result_mem;
+output [7:0] 	w_alu_status_mem;
+wire [7:0]				w_ins_address_mem;
+output [4:0]	w_regDest_mem;
+output  [2:0]	w_control_mem_mem;
+output [1:0]	w_control_wb_mem;
+output [7:0] w_inst_address_mem;
 wire			w_branch;
 // Khoi WB
 wire [31:0] w_alu_result_wb,
@@ -179,11 +189,13 @@ REG_ID_EXE REG_ID_EXE(
 	.sign_extend_in(w_sign_extend),
 	.rt_in(w_inst_val_id[20:16]),
 	.rd_in(w_inst_val_id[15:11]),
+	.pc_in(w_inst_address_id),
 	
 	.control_exe_out(w_control_exe_exe),
 	.control_mem_out(w_control_mem_exe),
 	.control_wb_out(w_control_wb_exe),
 	.alu_op_out(w_alu_op_exe),
+	.pc_out(w_inst_address_exe),
 	
 	.read_data_1_out(w_read_data1_exe),
 	.read_data_2_out(w_read_data2_exe),
@@ -270,7 +282,7 @@ ADDER ADDER_0 (
 );
 // Can xem lai cho nay, 1 cai 8 bit 1 cai 32 bit ?
 ADDER ADDER_1 (
-	.in0(w_shift_left1),
+	.in0(w_shift_left1[7:0]),
 	.in1(w_inst_address_exe),
 	.out(w_inst_adder1)
 );

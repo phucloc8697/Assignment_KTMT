@@ -4,12 +4,12 @@ module t_SYSTEM;
 	reg [7:0] pc;
 	reg [7:0] sel;
 	wire [27:0] led;
-	wire [7:0] w_inst_address,w_alu_status,w_alu_status_mem,w_inst_address_mem,w_inst_address_exe;
+	wire [7:0] w_inst_address,w_alu_status,w_alu_status_mem,w_inst_address_mem,w_inst_address_exe,w_inst_adder0;
 	wire [31:0] w_inst_val,w_inst_val_id,w_read_data1,w_read_data2,w_sign_extend,w_read_data1_exe,w_read_data2_exe,w_sign_extend_exe,w_alu_result,w_mux2,
-					w_mux0,w_alu_result_mem,w_read_data2_mem;
-	wire [3:0] w_control_exe,w_control_exe_exe,w_alu_control;
+					w_mux0,w_alu_result_mem,w_read_data2_mem,w_mem_data,w_mem_data_wb,w_alu_result_wb;
+	wire [3:0] w_control_exe,w_control_exe_exe,w_alu_control,w_regDest_wb;
 	wire [2:0] w_control_mem,w_control_mem_exe,w_control_mem_mem;
-	wire [1:0] w_control_wb,w_control_wb_exe,w_control_wb_mem;
+	wire [1:0] w_control_wb,w_control_wb_exe,w_control_wb_mem,w_control_wb_out;
 	wire [5:0] w_alu_op_exe;
 	wire [4:0] w_rt_exe,w_rd_exe,w_regDest_mem;
 	SYSTEM f(
@@ -19,6 +19,7 @@ module t_SYSTEM;
 	.SYS_pc_val(pc),
 	.SYS_output_sel(sel),
 	.SYS_leds(led),
+	.w_inst_adder0(w_inst_adder0),
 	
 	.w_inst_address(w_inst_address),
 	.w_inst_val(w_inst_val),
@@ -54,7 +55,14 @@ module t_SYSTEM;
 	.w_alu_status_mem(w_alu_status_mem),
 	.w_alu_result_mem(w_alu_result_mem),
 	.w_read_data2_mem(w_read_data2_mem),
-	.w_regDest_mem(w_regDest_mem)
+	.w_regDest_mem(w_regDest_mem),
+	
+	.w_mem_data(w_mem_data),
+	
+	.w_control_wb_out(w_control_wb_out),
+	.w_mem_data_wb(w_mem_data_wb),
+	.w_alu_result_wb(w_alu_result_wb),
+	.w_regDest_wb(w_regDest_wb)
 );
 	initial begin
 		clk=0;
@@ -62,7 +70,7 @@ module t_SYSTEM;
 	end
 	initial begin
 		rst=1;
-		pc=8'd4;
+		pc=8'd12;
 		#5 rst=0;
 		#10 rst=1;
 	end

@@ -19,7 +19,11 @@ module IMEM (
 	assign	register[9] = 8'h2b;
 	assign	register[10] = 8'h50;
 	assign	register[11] = 8'h20;
-
+	
+	assign	register[12] = 8'h8d;
+	assign	register[13] = 8'h49;
+	assign	register[14] = 8'h00;
+	assign	register[15] = 8'h04;
 	
 	always @(posedge CLK) begin
 		IMEM_instruction[31:24] <= register[MEM_PC];

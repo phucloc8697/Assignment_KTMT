@@ -5,6 +5,7 @@ module SYSTEM (
 	SYS_pc_val,
 	SYS_output_sel,
 	SYS_leds,
+	w_inst_adder0,
 	
 	w_inst_address,
 	w_inst_val,
@@ -40,7 +41,14 @@ module SYSTEM (
 	w_alu_status_mem,
 	w_alu_result_mem,
 	w_read_data2_mem,
-	w_regDest_mem
+	w_regDest_mem,
+	
+	w_mem_data,
+	
+	w_control_wb_out,
+	w_mem_data_wb,
+	w_alu_result_wb,
+	w_regDest_wb
 );
 
 input SYS_clk, SYS_reset, SYS_load;
@@ -52,7 +60,7 @@ output reg [26:0] SYS_leds;
 // Khoi IF
 output  [31:0] w_inst_val;
 output  [7:0] 	w_inst_address;
-wire [7:0]		w_inst_adder0;
+output  [7:0]		w_inst_adder0;
 // Khoi ID
 output [31:0] w_inst_val_id,
 				w_read_data1,
@@ -91,7 +99,7 @@ wire 			w_alu_exception,
 				w_exception;
 // Khoi MEM
 output  [31:0] w_read_data2_mem;
-wire [31:0]				w_mem_data;
+output [31:0]				w_mem_data;
 output [31:0] w_alu_result_mem;
 output [7:0] 	w_alu_status_mem;
 wire [7:0]				w_ins_address_mem;
@@ -101,11 +109,12 @@ output [1:0]	w_control_wb_mem;
 output [7:0] w_inst_address_mem;
 wire			w_branch;
 // Khoi WB
-wire [31:0] w_alu_result_wb,
-				w_mem_data_wb,
-				w_mux4;
-wire [4:0]	w_regDest_wb;
+output  [31:0] w_alu_result_wb;
+wire [31:0]		w_mux4;
+output [31:0] w_mem_data_wb;
+output  [4:0]	w_regDest_wb;
 wire [1:0] 	w_control_wb_wb;
+output [1:0] w_control_wb_out;
 //	Other
 wire [31:0] w_adder_jump;
 output [31:0]				w_mux0;
@@ -275,7 +284,8 @@ SHIFT_LEFT_2 SL_1 (
 	.in(w_sign_extend_exe),
 	.out(w_shift_left1)
 );
-ADDER ADDER_0 (
+ADDER_0 ADDER_0 (
+	.clk(SYS_clk),
 	.in0(w_inst_address),
 	.in1(8'd4),
 	.out(w_inst_adder0)

@@ -5,7 +5,7 @@ module ADDER (
 );
 
 input [7:0] in0, in1;
-output out;
+output [7:0] out;
 
 assign out = in0 + in1;
 

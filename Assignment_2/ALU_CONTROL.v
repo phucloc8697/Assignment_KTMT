@@ -8,7 +8,7 @@ input [1:0] ALU_op;
 input [5:0] Funct;
 output reg [3:0] ALU_control;
 
-always @(*) begin
+always @(ALU_op,Funct) begin
 	case(ALU_op[1:0])
 		2'b00: begin
 			if(Funct==6'h23||Funct==6'h2b)	// phep lw sw
@@ -28,19 +28,19 @@ always @(*) begin
 		end
 		
 		2'b10: begin
-			if(Funct==6'b100100)						// phep and
+			if(Funct==6'b100100||Funct==6'b001100)						// phep and
 				ALU_control=4'd0;
 				
-			else if(Funct==6'b100101)				// phep or
+			else if(Funct==6'b100101||Funct==6'b001101)				// phep or
 				ALU_control=4'b0001;
 				
-			else if(Funct==6'b100000)				// phep cong
+			else if(Funct==6'b100000||Funct==6'b001000)// phep cong
 				ALU_control=4'b0010;
 				
 			else if(Funct==6'b100010)				// phep tru
 				ALU_control=4'b0110;
 				
-			else if(Funct==6'b101010)				// phep so sanh
+			else if(Funct==6'b101010||Funct==6'b001010)				// phep so sanh
 				ALU_control=4'b0111;
 				
 			else if(Funct==6'b100111)				// phep nor

@@ -29,7 +29,9 @@ module SYSTEM (
 	
 	w_alu_result,
 	w_alu_status,
-	w_alu_control
+	w_alu_control,
+	w_mux2,
+	w_mux0
 );
 
 input SYS_clk, SYS_reset, SYS_load;
@@ -60,8 +62,8 @@ wire [31:0] w_regDest,
 			//	w_read_data1_exe,
 			//	w_read_data2_exe,
 			//	w_sign_extend_exe,
-				w_shift_left1,
-				w_mux2;
+				w_shift_left1;
+output[31:0]				w_mux2;
 output [31:0]				w_alu_result;
 output [31:0] w_read_data1_exe,
 					w_read_data2_exe,
@@ -95,8 +97,8 @@ wire [31:0] w_alu_result_wb,
 wire [4:0]	w_regDest_wb;
 wire [1:0] 	w_control_wb_wb;
 //	Other
-wire [31:0] w_adder_jump,
-				w_mux0;
+wire [31:0] w_adder_jump;
+output [31:0]				w_mux0;
 wire [27:0] w_shift_left0;
 wire [7:0]	w_mux1;
 

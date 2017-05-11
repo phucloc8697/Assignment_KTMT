@@ -5,7 +5,8 @@ module t_SYSTEM;
 	reg [7:0] sel;
 	wire [27:0] led;
 	wire [7:0] w_inst_address,w_alu_status;
-	wire [31:0] w_inst_val,w_inst_val_id,w_read_data1,w_read_data2,w_sign_extend,w_read_data1_exe,w_read_data2_exe,w_sign_extend_exe,w_alu_result;
+	wire [31:0] w_inst_val,w_inst_val_id,w_read_data1,w_read_data2,w_sign_extend,w_read_data1_exe,w_read_data2_exe,w_sign_extend_exe,w_alu_result,w_mux2,
+					w_mux0;
 	wire [3:0] w_control_exe,w_control_exe_exe,w_alu_control;
 	wire [2:0] w_control_mem,w_control_mem_exe;
 	wire [1:0] w_control_wb,w_control_wb_exe;
@@ -42,7 +43,9 @@ module t_SYSTEM;
 	
 	.w_alu_result(w_alu_result),
 	.w_alu_status(w_alu_status),
-	.w_alu_control(w_alu_control)
+	.w_alu_control(w_alu_control),
+	.w_mux2(w_mux2),
+	.w_mux0(w_mux0)
 );
 	initial begin
 		clk=0;
@@ -50,7 +53,7 @@ module t_SYSTEM;
 	end
 	initial begin
 		rst=1;
-		pc=8'd0;
+		pc=8'd4;
 		#5 rst=0;
 		#10 rst=1;
 	end

@@ -1,4 +1,5 @@
 # Reading C:/altera_lite/16.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
 # do Assignment_2_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -10,70 +11,286 @@
 # Copying C:/altera_lite/16.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/Luong\ Anh/Desktop/ktmt/Assignment_2 {C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/ALU_CONTROL.v}
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 15:32:00 on May 09,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Luong Anh/Desktop/ktmt/Assignment_2" C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v 
+# Start time: 00:41:25 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/ALU_CONTROL.v 
+# -- Compiling module ALU_CONTROL
+# 
+# Top level modules:
+# 	ALU_CONTROL
+# End time: 00:41:25 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/ALU.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:25 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/ALU.v 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 00:41:26 on May 11,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:26 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v 
 # -- Compiling module IMEM
 # 
 # Top level modules:
 # 	IMEM
-# End time: 15:32:00 on May 09,2017, Elapsed time: 0:00:00
+# End time: 00:41:26 on May 11,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -vlog01compat -work work +incdir+C:/Users/Luong\ Anh/Desktop/ktmt/Assignment_2 {C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/REG.v}
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 15:32:00 on May 09,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Luong Anh/Desktop/ktmt/Assignment_2" C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v 
+# Start time: 00:41:26 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/REG.v 
+# -- Compiling module REG
+# 
+# Top level modules:
+# 	REG
+# End time: 00:41:27 on May 11,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:27 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v 
+# -- Compiling module MUX
+# 
+# Top level modules:
+# 	MUX
+# End time: 00:41:27 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/DMEM.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:27 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/DMEM.v 
+# -- Compiling module DMEM
+# 
+# Top level modules:
+# 	DMEM
+# End time: 00:41:28 on May 11,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/CONTROL.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:28 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/CONTROL.v 
+# -- Compiling module CONTROL
+# 
+# Top level modules:
+# 	CONTROL
+# End time: 00:41:28 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:28 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v 
+# -- Compiling module ADDER
+# 
+# Top level modules:
+# 	ADDER
+# End time: 00:41:28 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/SIGN_EXTEND.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:29 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/SIGN_EXTEND.v 
+# -- Compiling module SIGN_EXTEND
+# 
+# Top level modules:
+# 	SIGN_EXTEND
+# End time: 00:41:29 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:29 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v 
+# -- Compiling module SHIFT_LEFT_2
+# 
+# Top level modules:
+# 	SHIFT_LEFT_2
+# End time: 00:41:30 on May 11,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:30 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v 
+# -- Compiling module REG_IF_ID
+# 
+# Top level modules:
+# 	REG_IF_ID
+# End time: 00:41:30 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:30 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v 
+# -- Compiling module REG_ID_EXE
+# 
+# Top level modules:
+# 	REG_ID_EXE
+# End time: 00:41:31 on May 11,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:31 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v 
+# -- Compiling module REG_EXE_MEM
+# 
+# Top level modules:
+# 	REG_EXE_MEM
+# End time: 00:41:31 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:31 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v 
+# -- Compiling module REG_MEM_WB
+# 
+# Top level modules:
+# 	REG_MEM_WB
+# End time: 00:41:32 on May 11,2017, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:32 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v 
+# -- Compiling module SYSTEM
+# 
+# Top level modules:
+# 	SYSTEM
+# End time: 00:41:32 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:32 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v 
 # -- Compiling module IMEM_BRAM
 # 
 # Top level modules:
 # 	IMEM_BRAM
-# End time: 15:32:00 on May 09,2017, Elapsed time: 0:00:00
+# End time: 00:41:32 on May 11,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# 
-# vlog -vlog01compat -work work +incdir+C:/Users/Luong\ Anh/Desktop/ktmt/Assignment_2 {C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/t_IMEM.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/PC.v}
 # Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
-# Start time: 15:32:00 on May 09,2017
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/Luong Anh/Desktop/ktmt/Assignment_2" C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/t_IMEM.v 
-# -- Compiling module t_IMEM
+# Start time: 00:41:33 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/PC.v 
+# -- Compiling module PC
 # 
 # Top level modules:
-# 	t_IMEM
-# End time: 15:32:00 on May 09,2017, Elapsed time: 0:00:00
+# 	PC
+# End time: 00:41:33 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/and_branch.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:33 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/and_branch.v 
+# -- Compiling module AND_BRANCH
+# 
+# Top level modules:
+# 	AND_BRANCH
+# End time: 00:41:33 on May 11,2017, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  t_IMEM
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=""+acc"" t_IMEM 
-# Start time: 15:32:00 on May 09,2017
-# Loading work.t_IMEM
+# vlog -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2 {C:/Users/luong/Desktop/ktmt/Assignment_2/t_SYSTEM.v}
+# Model Technology ModelSim ALTERA vlog 10.4d Compiler 2015.12 Dec 30 2015
+# Start time: 00:41:33 on May 11,2017
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2" C:/Users/luong/Desktop/ktmt/Assignment_2/t_SYSTEM.v 
+# -- Compiling module t_SYSTEM
+# 
+# Top level modules:
+# 	t_SYSTEM
+# End time: 00:41:33 on May 11,2017, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  t_SYSTEM
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=""+acc"" t_SYSTEM 
+# Start time: 00:41:33 on May 11,2017
+# Loading work.t_SYSTEM
+# Loading work.SYSTEM
+# Loading work.PC
 # Loading work.IMEM
 # Loading work.IMEM_BRAM
 # Loading altera_mf_ver.altsyncram
+# Loading work.REG
+# Loading work.DMEM
+# Loading work.CONTROL
+# Loading work.SIGN_EXTEND
+# Loading work.ALU
+# Loading work.ALU_CONTROL
+# Loading work.REG_IF_ID
+# Loading work.REG_ID_EXE
+# Loading work.REG_EXE_MEM
+# Loading work.REG_MEM_WB
+# Loading work.MUX
+# Loading work.SHIFT_LEFT_2
+# Loading work.ADDER
+# Loading work.AND_BRANCH
 # Loading altera_mf_ver.altsyncram_body
 # Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
 # Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(7): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM1 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(7): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM1 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(8): [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM2 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(8): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM2 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(8): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM2 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(9): [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM3 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(9): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM3 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(9): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM3 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(10): [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM4 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(10): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM4 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-# ** Warning: (vsim-3015) C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM.v(10): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM4 File: C:/Users/Luong Anh/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/t_SYSTEM.v(15): [PCDPC] - Port size (27) does not match connection size (28) for port 'SYS_leds'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f File: C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(106): [PCDPC] - Port size (8) does not match connection size (32) for port 'PC_in'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/PC.v(1).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/PC File: C:/Users/luong/Desktop/ktmt/Assignment_2/PC.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(7): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM1 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(7): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM1 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(8): [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM2 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(8): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM2 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(8): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM2 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(9): [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM3 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(9): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM3 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(9): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM3 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(10): [PCDPC] - Port size (8) does not match connection size (32) for port 'address'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(41).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM4 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(10): [PCDPC] - Port size (1) does not match connection size (32) for port 'wren'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(44).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM4 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v(10): [PCDPC] - Port size (32) does not match connection size (8) for port 'q'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v(45).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM4 File: C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(162): [PCDPC] - Port size (32) does not match connection size (8) for port 'pc_address_in'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_IF_ID File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(162): [PCDPC] - Port size (32) does not match connection size (8) for port 'pc_address_out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v(5).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_IF_ID File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v
+# ** Warning: (vsim-3017) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(169): [TFMPC] - Too few port connections. Expected 20, found 19.
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_ID_EXE File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(194): [PCDPC] - Port size (32) does not match connection size (8) for port 'branch_address_in'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_EXE_MEM File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(194): [PCDPC] - Port size (32) does not match connection size (1) for port 'branch_address_out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v(15).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_EXE_MEM File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(194): [PCDPC] - Port size (32) does not match connection size (5) for port 'reg_dst_address_out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v(19).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_EXE_MEM File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(214): [PCDPC] - Port size (32) does not match connection size (5) for port 'reg_dst_address_in'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v(7).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_MEM_WB File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(214): [PCDPC] - Port size (2) does not match connection size (1) for port 'control_wb_out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_MEM_WB File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(214): [PCDPC] - Port size (32) does not match connection size (5) for port 'reg_dst_address_out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/REG_MEM_WB File: C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(228): [PCDPC] - Port size (32) does not match connection size (8) for port 'in0'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/MUX_0 File: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(234): [PCDPC] - Port size (32) does not match connection size (8) for port 'in0'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/MUX_1 File: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(234): [PCDPC] - Port size (32) does not match connection size (1) for port 'in1'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/MUX_1 File: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(246): [PCDPC] - Port size (32) does not match connection size (5) for port 'in0'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/MUX_3 File: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(246): [PCDPC] - Port size (32) does not match connection size (5) for port 'in1'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/MUX_3 File: C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(258): [PCDPC] - Port size (32) does not match connection size (28) for port 'out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v(3).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/SL_0 File: C:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(266): [PCDPC] - Port size (1) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/ADDER_0 File: C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(272): [PCDPC] - Port size (8) does not match connection size (32) for port 'in0'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v(2).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/ADDER_1 File: C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v
+# ** Warning: (vsim-3015) C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v(272): [PCDPC] - Port size (1) does not match connection size (8) for port 'out'. The port definition is at: C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v(4).
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/ADDER_1 File: C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v
 # 
 # add wave *
 # view structure
@@ -82,14 +299,14 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # ** Warning: (vsim-PLI-3412) Memory address read on line 513 of file "mem.ver" is out of bounds specified for readmem command.  (Current address [256], address range [0:255])    : /build/swbuild/SJ/nightly/16.0/211/l64/work/modelsim/eda/sim_lib/altera_mf.v(48558)
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM1/altsyncram_component/m_default/altsyncram_inst
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM1/altsyncram_component/m_default/altsyncram_inst
 # ** Warning: (vsim-PLI-3412) Memory address read on line 513 of file "mem.ver" is out of bounds specified for readmem command.  (Current address [256], address range [0:255])    : /build/swbuild/SJ/nightly/16.0/211/l64/work/modelsim/eda/sim_lib/altera_mf.v(48558)
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM2/altsyncram_component/m_default/altsyncram_inst
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM2/altsyncram_component/m_default/altsyncram_inst
 # ** Warning: (vsim-PLI-3412) Memory address read on line 513 of file "mem.ver" is out of bounds specified for readmem command.  (Current address [256], address range [0:255])    : /build/swbuild/SJ/nightly/16.0/211/l64/work/modelsim/eda/sim_lib/altera_mf.v(48558)
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM3/altsyncram_component/m_default/altsyncram_inst
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM3/altsyncram_component/m_default/altsyncram_inst
 # ** Warning: (vsim-PLI-3412) Memory address read on line 513 of file "mem.ver" is out of bounds specified for readmem command.  (Current address [256], address range [0:255])    : /build/swbuild/SJ/nightly/16.0/211/l64/work/modelsim/eda/sim_lib/altera_mf.v(48558)
-#    Time: 0 ps  Iteration: 0  Instance: /t_IMEM/f/RAM4/altsyncram_component/m_default/altsyncram_inst
+#    Time: 0 ps  Iteration: 0  Instance: /t_SYSTEM/f/IMEM/RAM4/altsyncram_component/m_default/altsyncram_inst
 # Break key hit
-# Break in Module altsyncram_body at /build/swbuild/SJ/nightly/16.0/211/l64/work/modelsim/eda/sim_lib/altera_mf.v line 48811
-# End time: 15:32:32 on May 09,2017, Elapsed time: 0:00:32
-# Errors: 0, Warnings: 15
+# Break in Module REG_ID_EXE at C:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v line 49
+# End time: 01:23:13 on May 11,2017, Elapsed time: 0:41:40
+# Errors: 0, Warnings: 35

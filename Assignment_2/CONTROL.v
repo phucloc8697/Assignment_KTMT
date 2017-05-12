@@ -52,7 +52,7 @@ always@(*) begin
 			ALUsrc = 1;
 			Exception = 0;
 			ALUop = 2'b10;
-			Mem2Reg = 0;
+			Mem2Reg = 1;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;
@@ -78,7 +78,7 @@ always@(*) begin
 			ALUsrc = 1;
 			Exception = 0;
 			ALUop = 2'b00;
-			Mem2Reg = 1;
+			Mem2Reg = 0;
 			MemWrite = 0;
 			MemRead = 1;
 			Branch = 0;
@@ -91,7 +91,7 @@ always@(*) begin
 			ALUsrc = 1;
 			Exception = 0;
 			ALUop = 2'b00;
-			Mem2Reg = 1;
+			Mem2Reg = 0;
 			MemWrite = 0;
 			MemRead = 1;
 			Branch = 0;
@@ -130,7 +130,7 @@ always@(*) begin
 			ALUsrc = 1;
 			Exception = 0;
 			ALUop = 2'b10;
-			Mem2Reg = 0;
+			Mem2Reg = 1;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;
@@ -221,7 +221,7 @@ always@(*) begin
 			ALUsrc = 1;
 			Exception = 0;
 			ALUop = 2'b10;
-			Mem2Reg = 0;
+			Mem2Reg = 1;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;

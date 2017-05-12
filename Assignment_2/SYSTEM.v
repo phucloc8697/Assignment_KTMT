@@ -33,7 +33,9 @@ module SYSTEM (
 	w_alu_status,
 	w_alu_control,
 	w_mux2,
+	w_mux1,
 	w_mux0,
+	w_mux4,
 	
 	w_control_mem_mem,
 	w_control_wb_mem,
@@ -61,12 +63,13 @@ output reg [26:0] SYS_leds;
 output  [31:0] w_inst_val;
 output  [7:0] 	w_inst_address;
 output  [7:0]		w_inst_adder0;
+reg [7:0] w_mux1_or_val_in;
 // Khoi ID
 output [31:0] w_inst_val_id,
 				w_read_data1,
 				w_read_data2,
 				w_sign_extend;
-wire [7:0] 	w_inst_address_id;
+wire [7:0] 	w_inst_address_id,w_inst_adder0_check;
 wire [4:0]	w_rt,
 				w_rd;
 output [2:0] 	w_control_mem;
@@ -110,16 +113,16 @@ output [7:0] w_inst_address_mem;
 wire			w_branch;
 // Khoi WB
 output  [31:0] w_alu_result_wb;
-wire [31:0]		w_mux4;
+output [31:0]		w_mux4;
 output [31:0] w_mem_data_wb;
 output  [4:0]	w_regDest_wb;
 wire [1:0] 	w_control_wb_wb;
 output [1:0] w_control_wb_out;
 //	Other
 wire [31:0] w_adder_jump;
-output [31:0]				w_mux0;
+output [7:0]				w_mux0;
 wire [27:0] w_shift_left0;
-wire [7:0]	w_mux1;
+output [7:0]	w_mux1;
 
 
 PC PC( 	
@@ -246,17 +249,17 @@ REG_MEM_WB REG_MEM_WB (
 	.reg_dst_address_out(w_regDest_wb)
 );
 
-MUX MUX_0 (
+MUX_8 MUX_0 (
 	.in0(w_mux1),
 	.in1(w_adder_jump),
 	.sel(w_control_jump),
 	.out(w_mux0)
 );
-MUX MUX_1 (
-	.in0(w_inst_adder0),
+MUX_8 MUX_1 (
+	.in0(w_inst_adder0_check),
 	.in1(w_inst_address_mem),
 	.sel(w_branch),
-	.out()
+	.out(w_mux1)
 );
 MUX MUX_2 (
 	.in0(w_read_data2_exe),
@@ -273,7 +276,7 @@ MUX MUX_3 (
 MUX MUX_4 (
 	.in0(w_mem_data_wb),
 	.in1(w_alu_result_wb),
-	.sel(w_control_wb_wb[1]),
+	.sel(w_control_wb_out[1]),
 	.out(w_mux4)
 );
 SHIFT_LEFT_2 SL_0 (
@@ -289,6 +292,11 @@ ADDER_0 ADDER_0 (
 	.in0(w_inst_address),
 	.in1(8'd4),
 	.out(w_inst_adder0)
+);
+ADDER ADDER_01 (
+	.in0(w_inst_address),
+	.in1(8'd4),
+	.out(w_inst_adder0_check)
 );
 // Can xem lai cho nay, 1 cai 8 bit 1 cai 32 bit ?
 ADDER ADDER_1 (

@@ -35,7 +35,7 @@ reg [2:0] control_mem;
 reg [1:0] control_wb;
 reg [31:0] branch_address, ALU_result, read_data_2, reg_dst_address;
 
-always@(negedge CLK or posedge exception_disable) begin
+always@(posedge CLK or posedge exception_disable) begin
 	control_mem <= control_mem_in;
 	control_wb <= control_wb_in;
 	branch_address <= branch_address_in;
@@ -45,7 +45,7 @@ always@(negedge CLK or posedge exception_disable) begin
 	reg_dst_address <= reg_dst_address_in;
 end
 
-always @(posedge CLK) begin
+always @(negedge CLK) begin
 	if (exception_disable) begin
 		control_mem_out <= 0;
 		control_wb_out <= 0;

@@ -47,7 +47,7 @@ module SYSTEM (
 	
 	w_mem_data,
 	
-	w_control_wb_out,
+	w_control_wb_wb,
 	w_mem_data_wb,
 	w_alu_result_wb,
 	w_regDest_wb
@@ -116,8 +116,7 @@ output  [31:0] w_alu_result_wb;
 output [31:0]		w_mux4;
 output [31:0] w_mem_data_wb;
 output  [4:0]	w_regDest_wb;
-wire [1:0] 	w_control_wb_wb;
-output [1:0] w_control_wb_out;
+output [1:0] 	w_control_wb_wb;
 //	Other
 wire [31:0] w_adder_jump;
 output [7:0]				w_mux0;
@@ -127,7 +126,8 @@ output [7:0]	w_mux1;
 
 PC PC( 	
 	.CLK(SYS_clk),
-	.RESET(SYS_reset), 
+	.RESET(SYS_reset),
+	.LOAD(SYS_load),
 	.PC_val(SYS_pc_val), 
 	.PC_in(w_mux0), 
 	.PC_out(w_inst_address)
@@ -243,7 +243,7 @@ REG_MEM_WB REG_MEM_WB (
 	.ALU_result_in(w_alu_result_mem),
 	.reg_dst_address_in(w_regDest_mem),
 	
-	.control_wb_out(w_control_wb_out),
+	.control_wb_out(w_control_wb_wb),
 	.read_data_out(w_mem_data_wb),
 	.ALU_result_out(w_alu_result_wb),
 	.reg_dst_address_out(w_regDest_wb)
@@ -276,7 +276,7 @@ MUX MUX_3 (
 MUX MUX_4 (
 	.in0(w_mem_data_wb),
 	.in1(w_alu_result_wb),
-	.sel(w_control_wb_out[1]),
+	.sel(w_control_wb_wb[1]),
 	.out(w_mux4)
 );
 SHIFT_LEFT_2 SL_0 (

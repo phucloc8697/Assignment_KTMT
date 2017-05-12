@@ -51,7 +51,7 @@ reg [31:0] read_data_1, read_data_2, sign_extend;
 reg [4:0] rt, rd;
 reg [7:0] pc;
 
-always@(negedge CLK) begin
+always@(posedge CLK) begin
 	control_exe <= control_exe_in;
 	control_mem <= control_mem_in;
 	control_wb <= control_wb_in;
@@ -65,7 +65,7 @@ always@(negedge CLK) begin
 	rd <= rd_in;
 end
 
-always @(posedge CLK) begin	
+always @(negedge CLK) begin	
 	if(alu_op) alu_op_out <= alu_op;
 	else alu_op_out <= sign_extend[5:0];
 

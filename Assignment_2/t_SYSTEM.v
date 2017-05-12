@@ -10,9 +10,10 @@ module t_SYSTEM;
 					w_alu_result_mem,w_read_data2_mem,w_mem_data,w_mem_data_wb,w_alu_result_wb,w_mux4;
 	wire [3:0] w_control_exe,w_control_exe_exe,w_alu_control,w_regDest_wb;
 	wire [2:0] w_control_mem,w_control_mem_exe,w_control_mem_mem;
-	wire [1:0] w_control_wb,w_control_wb_exe,w_control_wb_mem,w_control_wb_out;
+	wire [1:0] w_control_wb,w_control_wb_exe,w_control_wb_mem,w_control_wb_wb;
 	wire [5:0] w_alu_op_exe;
 	wire [4:0] w_rt_exe,w_rd_exe,w_regDest_mem;
+	
 	SYSTEM f(
 	.SYS_clk(clk),
 	.SYS_reset(rst),
@@ -62,7 +63,7 @@ module t_SYSTEM;
 	
 	.w_mem_data(w_mem_data),
 	
-	.w_control_wb_out(w_control_wb_out),
+	.w_control_wb_wb(w_control_wb_wb),
 	.w_mem_data_wb(w_mem_data_wb),
 	.w_alu_result_wb(w_alu_result_wb),
 	.w_regDest_wb(w_regDest_wb)
@@ -75,7 +76,9 @@ module t_SYSTEM;
 		rst=1;
 		pc=8'd0;
 		#5 rst=0;
-		#10 rst=1;
+		#5 rst=1;
+		#5 load = 1;
+		#5	load = 0;
 		#1000 $stop;
 		
 	end

@@ -51,10 +51,7 @@ reg [31:0] read_data_1, read_data_2, sign_extend;
 reg [4:0] rt, rd;
 reg [7:0] pc;
 
-always@(posedge CLK) begin
-	if(alu_op)
-		alu_op_out <= alu_op;
-	else alu_op_out <= sign_extend[5:0];
+always@(negedge CLK) begin
 	control_exe <= control_exe_in;
 	control_mem <= control_mem_in;
 	control_wb <= control_wb_in;
@@ -66,7 +63,12 @@ always@(posedge CLK) begin
 	sign_extend <= sign_extend_in;
 	rt <= rt_in;
 	rd <= rd_in;
-	
+end
+
+always @(posedge CLK) begin	
+	if(alu_op) alu_op_out <= alu_op;
+	else alu_op_out <= sign_extend[5:0];
+
 	control_exe_out <= control_exe;
 	control_mem_out <= control_mem;
 	control_wb_out <= control_wb;

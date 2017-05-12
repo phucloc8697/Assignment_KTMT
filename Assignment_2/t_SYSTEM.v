@@ -76,5 +76,7 @@ module t_SYSTEM;
 		pc=8'd0;
 		#5 rst=0;
 		#10 rst=1;
+		#1000 $stop;
+		
 	end
 endmodule 

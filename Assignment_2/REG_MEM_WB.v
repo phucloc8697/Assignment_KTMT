@@ -22,12 +22,13 @@ output reg [31:0] read_data_out, ALU_result_out, reg_dst_address_out;
 reg [1:0] control_wb;
 reg [31:0] read_data, ALU_result, reg_dst_address;
 
-always@(posedge CLK) begin
+always @(negedge CLK) begin
 	control_wb <= control_wb_in;
 	read_data <= read_data_in;
 	ALU_result <= ALU_result_in;
 	reg_dst_address <= reg_dst_address_in;
-	
+end
+always @(posedge CLK) begin
 	control_wb_out <= control_wb;
 	read_data_out <= read_data;
 	ALU_result_out <= ALU_result;

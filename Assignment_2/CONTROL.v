@@ -28,6 +28,8 @@ assign control_mem[2] = Branch;
 assign control_wb[0] = RegWrite;
 assign control_wb[1] = Mem2Reg;
 
+assign control_exception = Exception;
+
 always@(*) begin
 
 	case (opcode[5:0])

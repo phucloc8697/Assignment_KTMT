@@ -1,6 +1,6 @@
 `timescale 1ns/1ns
 module t_SYSTEM;
-	reg clk,rst,load;
+	reg clk,rst,load,CLK_50;
 	reg [7:0] pc;
 	reg [7:0] sel;
 	wire [27:0] led;
@@ -16,6 +16,7 @@ module t_SYSTEM;
 	
 	SYSTEM f(
 	.SYS_clk(clk),
+	.CLK_50 (CLK_50),
 	.SYS_reset(rst),
 	.SYS_load(load),
 	.SYS_pc_val(pc),
@@ -69,8 +70,13 @@ module t_SYSTEM;
 	.w_regDest_wb(w_regDest_wb)
 );
 	initial begin
+		#50
 		clk=0;
 		forever #20 clk=~clk;
+	end
+	initial begin
+		CLK_50=0;
+		forever #1 CLK_50=~CLK_50;
 	end
 	initial begin
 		rst=1;

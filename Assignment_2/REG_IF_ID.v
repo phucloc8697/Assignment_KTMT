@@ -8,7 +8,7 @@ module REG_IF_ID (
 
 input CLK;
 input [31:0] pc_address_in, instruction_in;
-output reg [31:0] pc_address_out, instruction_out;
+output  [31:0] pc_address_out, instruction_out;
 
 reg [31:0] pc_address, instruction;
 
@@ -17,9 +17,8 @@ always @(posedge CLK) begin
 	pc_address <= pc_address_in;
 end
 
-always @(negedge CLK) begin
-	instruction_out <= instruction;
-	pc_address_out <= pc_address;
-end
+assign pc_address_out = pc_address;
+assign instruction_out = instruction;
+
 
 endmodule

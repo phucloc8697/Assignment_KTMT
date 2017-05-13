@@ -1,5 +1,6 @@
 module SYSTEM (
 	SYS_clk,
+	CLK_50,
 	SYS_reset,
 	SYS_load,
 	SYS_pc_val,
@@ -53,7 +54,7 @@ module SYSTEM (
 	w_regDest_wb
 );
 
-input SYS_clk, SYS_reset, SYS_load;
+input SYS_clk, SYS_reset, SYS_load,CLK_50;
 input [7:0] SYS_pc_val, SYS_output_sel;
 
 output reg [26:0] SYS_leds;
@@ -133,12 +134,12 @@ PC PC(
 	.PC_out(w_inst_address)
 );
 IMEM IMEM (
-	.CLK(SYS_clk), 
+	.CLK(CLK_50), 
 	.MEM_PC(w_inst_address), 
 	.IMEM_instruction(w_inst_val)
 );
 REG REG (
-	.CLK(SYS_clk),
+	.CLK(CLK_50),
 	.RESET(SYS_reset),
 	.REG_address1(w_inst_val_id[25:21]),
 	.REG_address2(w_inst_val_id[20:16]),
@@ -149,7 +150,7 @@ REG REG (
 	.REG_data_out2(w_read_data2)
 );
 DMEM DMEM (
-	.CLK(SYS_clk),
+	.CLK(CLK_50),
 	.DMEM_address(w_alu_result_mem),
 	.DMEM_data_in(w_read_data2_mem),
 	.DMEM_mem_write(w_control_mem_mem[1]),
@@ -249,6 +250,11 @@ REG_MEM_WB REG_MEM_WB (
 	.reg_dst_address_out(w_regDest_wb)
 );
 
+EXCEPTION_HANDLE EXCEPTION_HANDLE(
+	.control_exception(w_control_exception),
+	.ALU_status(w_alu_status),
+	.disable_out(w_exception)
+);
 MUX_8 MUX_0 (
 	.in0(w_mux1),
 	.in1(w_adder_jump),
@@ -256,7 +262,7 @@ MUX_8 MUX_0 (
 	.out(w_mux0)
 );
 MUX_8 MUX_1 (
-	.in0(w_inst_adder0_check),
+	.in0(w_inst_adder0),
 	.in1(w_inst_address_mem),
 	.sel(w_branch),
 	.out(w_mux1)
@@ -287,16 +293,10 @@ SHIFT_LEFT_2 SL_1 (
 	.in(w_sign_extend_exe),
 	.out(w_shift_left1)
 );
-ADDER_0 ADDER_0 (
-	.clk(SYS_clk),
-	.in0(w_inst_address),
-	.in1(8'd4),
-	.out(w_inst_adder0)
-);
 ADDER ADDER_01 (
 	.in0(w_inst_address),
 	.in1(8'd4),
-	.out(w_inst_adder0_check)
+	.out(w_inst_adder0)
 );
 // Can xem lai cho nay, 1 cai 8 bit 1 cai 32 bit ?
 ADDER ADDER_1 (

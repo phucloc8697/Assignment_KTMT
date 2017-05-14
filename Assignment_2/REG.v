@@ -23,8 +23,8 @@ reg [31:0] register [0:31];
 
 always @(posedge CLK or negedge RESET) begin
 	if(!RESET) begin
-		REG_data_out1 <= 32'dx;
-		REG_data_out2 <= 32'dx;
+		REG_data_out1 <= 32'd0;
+		REG_data_out2 <= 32'd0;
 	end
 	else begin
 		REG_data_out1 <= register[REG_address1];

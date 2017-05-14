@@ -51,7 +51,10 @@ module SYSTEM (
 	w_control_wb_wb,
 	w_mem_data_wb,
 	w_alu_result_wb,
-	w_regDest_wb
+	w_regDest_wb,
+	
+	w_exception,
+	w_control_exception
 );
 
 input SYS_clk, SYS_reset, SYS_load,CLK_50;
@@ -76,8 +79,8 @@ wire [4:0]	w_rt,
 output [2:0] 	w_control_mem;
 output [3:0] w_control_exe;
 output [1:0] 	w_control_wb;
-wire 			w_control_jump,
-				w_control_exception;
+wire 			w_control_jump;
+output 				w_control_exception;
 // Khoi EXE
 wire [31:0] w_regDest,
 			//	w_read_data1_exe,
@@ -99,8 +102,8 @@ output [3:0] 	w_control_exe_exe;
 output	[3:0]			w_alu_control;
 output [2:0] 	w_control_mem_exe;
 output [1:0] 	w_control_wb_exe;
-wire 			w_alu_exception,
-				w_exception;
+wire 			w_alu_exception;
+output		w_exception;
 // Khoi MEM
 output  [31:0] w_read_data2_mem;
 output [31:0]				w_mem_data;
@@ -123,7 +126,7 @@ wire [31:0] w_adder_jump;
 output [7:0]				w_mux0;
 wire [27:0] w_shift_left0;
 output [7:0]	w_mux1;
-
+wire w_control_exception_exe;
 
 PC PC( 	
 	.CLK(SYS_clk),
@@ -158,7 +161,7 @@ DMEM DMEM (
 	.DMEM_data_out(w_mem_data)
 );
 CONTROL CONTROL (
-	.opcode(w_inst_val_id[31:26]),
+	.opcode(w_inst_val_id),
 	.control_exe(w_control_exe),
 	.control_mem(w_control_mem),
 	.control_wb(w_control_wb),
@@ -195,6 +198,7 @@ REG_ID_EXE REG_ID_EXE(
 	.control_exe_in(w_control_exe),
 	.control_mem_in(w_control_mem),
 	.control_wb_in(w_control_wb),
+	.control_exception_in(w_control_exception),
 	.alu_op_in(w_inst_val_id[31:26]),
 
 	.read_data_1_in(w_read_data1),
@@ -208,6 +212,7 @@ REG_ID_EXE REG_ID_EXE(
 	.control_mem_out(w_control_mem_exe),
 	.control_wb_out(w_control_wb_exe),
 	.alu_op_out(w_alu_op_exe),
+	.control_exception_out(w_control_exception_exe),
 	.pc_out(w_inst_address_exe),
 	
 	.read_data_1_out(w_read_data1_exe),
@@ -218,6 +223,7 @@ REG_ID_EXE REG_ID_EXE(
 );
 REG_EXE_MEM REG_EXE_MEM (
 	.CLK(SYS_clk),
+	.RESET(SYS_reset),
 	.exception_disable(w_exception),
 
 	.control_mem_in(w_control_mem_exe),
@@ -251,7 +257,7 @@ REG_MEM_WB REG_MEM_WB (
 );
 
 EXCEPTION_HANDLE EXCEPTION_HANDLE(
-	.control_exception(w_control_exception),
+	.control_exception(w_control_exception_exe),
 	.ALU_status(w_alu_status),
 	.disable_out(w_exception)
 );
@@ -309,7 +315,12 @@ AND_BRANCH AND_BRANCH (
 	.control_branch(w_control_mem_mem[2]),
 	.out(w_branch)
 );
-
+EPC EPC(
+	.in(w_inst_adder0),
+	.reset(SYS_reset),
+	.out1(hex1),
+	.out2(hex2)
+);
 always @(*) begin
 	case(SYS_output_sel[7:0])
 		//8'd0: 

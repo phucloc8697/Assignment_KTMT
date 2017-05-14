@@ -13,6 +13,7 @@ module t_SYSTEM;
 	wire [1:0] w_control_wb,w_control_wb_exe,w_control_wb_mem,w_control_wb_wb;
 	wire [5:0] w_alu_op_exe;
 	wire [4:0] w_rt_exe,w_rd_exe,w_regDest_mem;
+	wire w_exception;
 	
 	SYSTEM f(
 	.SYS_clk(clk),
@@ -67,7 +68,10 @@ module t_SYSTEM;
 	.w_control_wb_wb(w_control_wb_wb),
 	.w_mem_data_wb(w_mem_data_wb),
 	.w_alu_result_wb(w_alu_result_wb),
-	.w_regDest_wb(w_regDest_wb)
+	.w_regDest_wb(w_regDest_wb),
+	
+	.w_exception(w_exception),
+	.w_control_exception(w_control_exception)
 );
 	initial begin
 		#50

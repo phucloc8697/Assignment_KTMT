@@ -7,8 +7,7 @@ module CONTROL (
 	control_exception
 );
 
-input [5:0] opcode;
-
+input [31:0] opcode;
 output [3:0] control_exe;
 output [2:0] control_mem;
 output [1:0] control_wb;
@@ -32,33 +31,37 @@ assign control_exception = Exception;
 
 always@(*) begin
 
-	case (opcode[5:0])
+	case (opcode[31:26])
 
 		// Lenh R
 		6'd0: begin
 			RegDst = 1;
 			RegWrite = 1;
 			ALUsrc = 0;
-			Exception = 0;
 			ALUop = 2'b10;
 			Mem2Reg = 0;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			if( opcode[15:11] ==5'd0)
+				Exception = 1;
+			else Exception = 0;
 		end
 		// addi
 		6'd8: begin
 			RegDst = 0;
 			RegWrite = 1;
 			ALUsrc = 1;
-			Exception = 0;
 			ALUop = 2'b10;
 			Mem2Reg = 1;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			if( opcode[20:16] ==5'd0)
+				Exception = 1;
+			else Exception = 0;
 		end
 		// lbu
 		6'd36: begin
@@ -78,26 +81,30 @@ always@(*) begin
 			RegDst = 0;
 			RegWrite = 1;
 			ALUsrc = 1;
-			Exception = 0;
 			ALUop = 2'b00;
 			Mem2Reg = 0;
 			MemWrite = 0;
 			MemRead = 1;
 			Branch = 0;
 			Jump = 0;
+			if( opcode[20:16] ==5'd0)
+				Exception = 1;
+			else Exception = 0;
 		end
 		// lw
 		6'd35: begin
 			RegDst = 0;
 			RegWrite = 1;
 			ALUsrc = 1;
-			Exception = 0;
 			ALUop = 2'b00;
 			Mem2Reg = 0;
 			MemWrite = 0;
 			MemRead = 1;
 			Branch = 0;
 			Jump = 0;
+			if( opcode[20:16] ==5'd0)
+				Exception = 1;
+			else Exception = 0;
 		end
 		// sb
 		6'd40: begin
@@ -130,13 +137,15 @@ always@(*) begin
 			RegDst = 0;
 			RegWrite = 1;
 			ALUsrc = 1;
-			Exception = 0;
 			ALUop = 2'b10;
 			Mem2Reg = 1;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			if( opcode[20:16] ==5'd0)
+				Exception = 1;
+			else Exception = 0;
 		end
 		// beq
 		6'd4: begin
@@ -221,13 +230,15 @@ always@(*) begin
 			RegDst = 0;
 			RegWrite = 1;
 			ALUsrc = 1;
-			Exception = 0;
 			ALUop = 2'b10;
 			Mem2Reg = 1;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			if( opcode[20:16] ==5'd0)
+				Exception = 1;
+			else Exception = 0;
 		end
 		// bne
 		6'd5: begin

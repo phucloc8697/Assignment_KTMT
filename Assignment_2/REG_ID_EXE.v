@@ -4,6 +4,7 @@ module REG_ID_EXE (
 	control_exe_in,
 	control_mem_in,
 	control_wb_in,
+	control_exception_in,
 	alu_op_in,
 	pc_in,
 
@@ -16,6 +17,7 @@ module REG_ID_EXE (
 	control_exe_out,
 	control_mem_out,
 	control_wb_out,
+	control_exception_out,
 	alu_op_out,
 	pc_out,
 
@@ -23,10 +25,11 @@ module REG_ID_EXE (
 	read_data_2_out,
 	sign_extend_out,
 	rt_out,
-	rd_out,
+	rd_out
 );
 
 input CLK;
+input control_exception_in;
 input [3:0] control_exe_in;
 input [2:0]  control_mem_in;
 input [5:0] alu_op_in;
@@ -42,6 +45,7 @@ output  [1:0] control_wb_out;
 output  [31:0] read_data_1_out, read_data_2_out, sign_extend_out;
 output  [4:0] rt_out, rd_out;
 output  [7:0] pc_out;
+output control_exception_out;
 
 reg [3:0] control_exe;
 reg [2:0] control_mem;
@@ -50,12 +54,14 @@ reg [1:0] control_wb;
 reg [31:0] read_data_1, read_data_2, sign_extend;
 reg [4:0] rt, rd;
 reg [7:0] pc;
+reg control_exception;
 
 always@(posedge CLK) begin
 	control_exe <= control_exe_in;
 	control_mem <= control_mem_in;
 	control_wb <= control_wb_in;
 	alu_op <= alu_op_in;
+	control_exception <= control_exception_in;
 	pc <= pc_in;
 	
 	read_data_1 <= read_data_1_in;
@@ -78,6 +84,6 @@ assign	read_data_2_out = read_data_2;
 assign	sign_extend_out = sign_extend;
 assign	rt_out = rt;
 assign	rd_out = rd;
-
+assign   control_exception_out = control_exception;
 
 endmodule

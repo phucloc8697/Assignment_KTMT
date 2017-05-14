@@ -1,0 +1,83 @@
+# Copyright (C) 1991-2016 Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera MegaCore Function License Agreement, or other 
+# applicable license agreement, including, without limitation, 
+# that your use is for the sole purpose of programming logic 
+# devices manufactured by Altera and sold by Altera or its 
+# authorized distributors.  Please refer to the applicable 
+# agreement for further details.
+
+# Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
+# File: C:\Users\Luong Anh\Desktop\ass2\Assignment_2\Assignment_2.csv
+# Generated on: Sun May 14 07:22:04 2017
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,VREF Group,Fitter Location,I/O Standard,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+CLK_50,Input,PIN_AJ16,4,B4_N2,PIN_AJ16,2.5 V,,,,,
+SYS_clk,Input,PIN_AA26,5,B5_N2,PIN_AF30,2.5 V,,,,,
+SYS_leds[26],Output,PIN_J25,6,B6_N0,PIN_J25,2.5 V,,,,,
+SYS_leds[25],Output,PIN_M22,6,B6_N1,PIN_M22,2.5 V,,,,,
+SYS_leds[24],Output,PIN_M21,6,B6_N1,PIN_M21,2.5 V,,,,,
+SYS_leds[23],Output,PIN_L25,6,B6_N1,PIN_L25,2.5 V,,,,,
+SYS_leds[22],Output,PIN_K24,6,B6_N0,PIN_K24,2.5 V,,,,,
+SYS_leds[21],Output,PIN_M25,6,B6_N2,PIN_M25,2.5 V,,,,,
+SYS_leds[20],Output,PIN_N21,6,B6_N1,PIN_N21,2.5 V,,,,,
+SYS_leds[19],Output,PIN_N24,6,B6_N2,PIN_N24,2.5 V,,,,,
+SYS_leds[18],Output,PIN_P21,6,B6_N1,PIN_P21,2.5 V,,,,,
+SYS_leds[17],Output,PIN_R24,6,B6_N2,PIN_R24,2.5 V,,,,,
+SYS_leds[16],Output,PIN_P25,6,B6_N2,PIN_P25,2.5 V,,,,,
+SYS_leds[15],Output,PIN_T27,5,B5_N0,PIN_T27,2.5 V,,,,,
+SYS_leds[14],Output,PIN_R25,6,B6_N2,PIN_R25,2.5 V,,,,,
+SYS_leds[13],Output,PIN_T26,5,B5_N0,PIN_T26,2.5 V,,,,,
+SYS_leds[12],Output,PIN_T21,5,B5_N1,PIN_T21,2.5 V,,,,,
+SYS_leds[11],Output,PIN_W25,5,B5_N0,PIN_W25,2.5 V,,,,,
+SYS_leds[10],Output,PIN_V27,5,B5_N0,PIN_V27,2.5 V,,,,,
+SYS_leds[9],Output,PIN_T24,5,B5_N0,PIN_T24,2.5 V,,,,,
+SYS_leds[8],Output,PIN_T23,5,B5_N0,PIN_T23,2.5 V,,,,,
+SYS_leds[7],Output,PIN_AA22,5,B5_N1,PIN_AA22,2.5 V,,,,,
+SYS_leds[6],Output,PIN_Y25,5,B5_N2,PIN_Y25,2.5 V,,,,,
+SYS_leds[5],Output,PIN_Y22,5,B5_N1,PIN_Y22,2.5 V,,,,,
+SYS_leds[4],Output,PIN_W26,5,B5_N0,PIN_W26,2.5 V,,,,,
+SYS_leds[3],Output,PIN_F26,6,B6_N0,PIN_F26,2.5 V,,,,,
+SYS_leds[2],Output,PIN_F27,6,B6_N0,PIN_F27,2.5 V,,,,,
+SYS_leds[1],Output,PIN_AB25,5,B5_N2,PIN_AB25,2.5 V,,,,,
+SYS_leds[0],Output,PIN_AA25,5,B5_N2,PIN_AA25,2.5 V,,,,,
+SYS_load,Input,PIN_AE26,5,B5_N2,PIN_AE26,2.5 V,,,,,
+SYS_pc_val[7],Input,PIN_C30,6,B6_N0,PIN_C30,2.5 V,,,,,
+SYS_pc_val[6],Input,PIN_K25,6,B6_N1,PIN_K25,2.5 V,,,,,
+SYS_pc_val[5],Input,PIN_J26,6,B6_N1,PIN_J26,2.5 V,,,,,
+SYS_pc_val[4],Input,PIN_N25,6,B6_N2,PIN_N25,2.5 V,,,,,
+SYS_pc_val[3],Input,PIN_M26,6,B6_N2,PIN_M26,2.5 V,,,,,
+SYS_pc_val[2],Input,PIN_N26,6,B6_N2,PIN_N26,2.5 V,,,,,
+SYS_pc_val[1],Input,PIN_R26,6,B6_N2,PIN_R26,2.5 V,,,,,
+SYS_pc_val[0],Input,PIN_R29,6,B6_N2,PIN_R29,2.5 V,,,,,
+SYS_reset,Input,PIN_P30,6,B6_N2,PIN_P30,2.5 V,,,,,
+SYS_wire_sel[7],Input,PIN_R30,6,B6_N2,PIN_R30,2.5 V,,,,,
+SYS_wire_sel[6],Input,PIN_T28,6,B6_N2,PIN_T28,2.5 V,,,,,
+SYS_wire_sel[5],Input,PIN_U21,5,B5_N1,PIN_U21,2.5 V,,,,,
+SYS_wire_sel[4],Input,PIN_AB30,5,B5_N1,PIN_AB30,2.5 V,,,,,
+SYS_wire_sel[3],Input,PIN_C2,8,B8_N2,PIN_C2,2.5 V,,,,,
+SYS_wire_sel[2],Input,PIN_V21,5,B5_N1,PIN_V21,2.5 V,,,,,
+SYS_wire_sel[1],Input,PIN_U30,5,B5_N0,PIN_U30,2.5 V,,,,,
+SYS_wire_sel[0],Input,PIN_V28,5,B5_N0,PIN_V28,2.5 V,,,,,
+hex1[6],Output,PIN_F14,8,B8_N0,PIN_F14,2.5 V,,,,,
+hex1[5],Output,PIN_D16,8,B8_N0,PIN_D16,2.5 V,,,,,
+hex1[4],Output,PIN_F16,8,B8_N0,PIN_F16,2.5 V,,,,,
+hex1[3],Output,PIN_F11,8,B8_N1,PIN_F11,2.5 V,,,,,
+hex1[2],Output,PIN_G11,8,B8_N1,PIN_G11,2.5 V,,,,,
+hex1[1],Output,PIN_E12,8,B8_N1,PIN_E12,2.5 V,,,,,
+hex1[0],Output,PIN_E15,8,B8_N0,PIN_E15,2.5 V,,,,,
+hex2[6],Output,PIN_G10,8,B8_N2,PIN_G10,2.5 V,,,,,
+hex2[5],Output,PIN_J9,8,B8_N2,PIN_J9,2.5 V,,,,,
+hex2[4],Output,PIN_G12,8,B8_N1,PIN_G12,2.5 V,,,,,
+hex2[3],Output,PIN_F12,8,B8_N1,PIN_F12,2.5 V,,,,,
+hex2[2],Output,PIN_G13,8,B8_N0,PIN_G13,2.5 V,,,,,
+hex2[1],Output,PIN_B13,8,B8_N0,PIN_B13,2.5 V,,,,,
+hex2[0],Output,PIN_G14,8,B8_N0,PIN_G14,2.5 V,,,,,

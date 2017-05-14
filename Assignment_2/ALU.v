@@ -1,11 +1,12 @@
 module ALU (
+	RESET,
 	ALU_control,
 	ALU_operand_1,
 	ALU_operand_2,
 	ALU_result,
 	ALU_status
 );
-
+input RESET;
 input [3:0] ALU_control;
 input [31:0] ALU_operand_1,ALU_operand_2;
 output reg [31:0] ALU_result;
@@ -59,8 +60,8 @@ assign check_carry=temp1[15:0]+temp_addsub[15:0];
 ////////////////////////////////////////////////
 always @(*) begin
 	/*if(temp_mul>32'h7fffffff&&ALU_control==4'b0011)		// tran so phep nhan
-		ALU_status[6]=1;
-	else*/ if(ALU_control==4'b0010) begin
+		ALU_status[6]=1;*/
+	if(ALU_control==4'b0010) begin
 		if(temp_add[31]==1&&ALU_operand_1[31]==0&&ALU_operand_2[31]==0)	
 			ALU_status[6]=1;																									// tran so phep cong 
 		else if(temp_add[31]==0&&ALU_operand_1[31]==1&&ALU_operand_2[31]==1)
@@ -70,9 +71,9 @@ always @(*) begin
 		else ALU_status[6]=0;
 	end
 	else if(ALU_control==4'b0110) begin
-		if(temp_add[31]==1&&ALU_operand_1[31]==0&&ALU_operand_2sub[31]==0)									// tran so phep  tru
+		if(temp_add[31]==1&&ALU_operand_1[31]==0&&ALU_operand_2sub[31]==1)									// tran so phep  tru
 			ALU_status[6]=1;
-		else if(temp_add[31]==0&&ALU_operand_1[31]==1&&ALU_operand_2sub[31]==1)
+		else if(temp_add[31]==0&&ALU_operand_1[31]==1&&ALU_operand_2sub[31]==0)
 			ALU_status[6]=1;
 	//	else if(ALU_operand_1[31]!=ALU_operand_2sub[31]&&check_addsub>32'h7fffffff)
 	//		ALU_status[6]=1;
@@ -115,7 +116,9 @@ end
 
 /////////////////////////
 always @(*) begin
-	if(ALU_control==4'b0010||ALU_control==4'b0110) begin	// phep cong tru lw sw lh sh
+	if(!RESET)
+		ALU_result = 32'd0;
+	else if(ALU_control==4'b0010||ALU_control==4'b0110) begin	// phep cong tru lw sw lh sh
 		if(!ALU_status[6])
 			ALU_result=temp_add;
 		else ALU_result=32'dx;
@@ -163,7 +166,7 @@ always @(*) begin
 	else if(ALU_control==4'b1010||ALU_control==4'b1011) begin		// phep dich bit
 		ALU_result=shift_result;
 	end
-	else ALU_result =32'dx;
+	else ALU_result =32'd0;
 end
 	
 endmodule 

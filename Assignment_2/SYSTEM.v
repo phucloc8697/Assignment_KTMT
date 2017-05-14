@@ -324,11 +324,25 @@ EPC EPC(
 always @(*) begin
 	case(SYS_output_sel[7:0])
 		//8'd0: 
-		8'd1: SYS_leds = w_inst_val	;
-		8'd2: SYS_leds = w_read_data1	;
-		8'd3: SYS_leds = w_read_data2	;
-		8'd4: SYS_leds = w_alu_result	;
-		8'd5: SYS_leds = w_mem_data	;
+		8'd0: SYS_leds = w_inst_val	;
+		8'd1: SYS_leds = w_read_data1	;
+		8'd8: SYS_leds = w_read_data2	;
+		8'd2: SYS_leds = w_alu_result	;
+		8'd3: SYS_leds = w_alu_status ;
+		8'd4: SYS_leds = w_mem_data	;
+		8'd5: SYS_leds = { 16'd0,
+									w_control_jump,
+									w_control_mem[2],
+									w_control_mem[0],
+									w_control_mem[1],
+									w_control_wb[1],
+									w_control_exe[3:2],
+									w_control_exception,
+									w_control_exe[1],
+									w_control_wb[0],
+									w_control_exe[0]};
+		8'd6: SYS_leds = w_alu_control;
+		8'd7: SYS_leds = w_inst_address;
 		//default:
 	endcase
 end

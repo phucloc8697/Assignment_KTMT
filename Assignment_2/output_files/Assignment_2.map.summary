@@ -1,15 +1,15 @@
-Analysis & Synthesis Status : Successful - Thu May 11 00:38:32 2017
+Analysis & Synthesis Status : Successful - Sun May 14 22:59:12 2017
 Quartus Prime Version : 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 Revision Name : Assignment_2
 Top-level Entity Name : SYSTEM
 Family : Cyclone IV GX
-Total logic elements : 13,680
-    Total combinational functions : 6,665
-    Dedicated logic registers : 7,111
-Total registers : 7111
-Total pins : 452
+Total logic elements : 130
+    Total combinational functions : 96
+    Dedicated logic registers : 40
+Total registers : 40
+Total pins : 680
 Total virtual pins : 0
-Total memory bits : 15,104
+Total memory bits : 8,192
 Embedded Multiplier 9-bit elements : 0
 Total GXB Receiver Channel PCS : 0
 Total GXB Receiver Channel PMA : 0

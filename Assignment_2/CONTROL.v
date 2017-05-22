@@ -39,7 +39,7 @@ always@(*) begin
 			RegWrite = 1;
 			ALUsrc = 0;
 			ALUop = 2'b10;
-			Mem2Reg = 0;
+			Mem2Reg = 1;
 			MemWrite = 0;
 			MemRead = 0;
 			Branch = 0;

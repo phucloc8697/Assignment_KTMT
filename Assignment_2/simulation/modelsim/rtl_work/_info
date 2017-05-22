@@ -7,47 +7,47 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/luong/Desktop/ktmt/Assignment_2/simulation/modelsim
+Z0 dF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/simulation/modelsim
 vADDER
-Z1 !s110 1494438088
+Z1 !s110 1494777797
 !i10b 1
-!s100 >6UBm3_^=0:Pc_>^3UKH`1
-IP10n?[XZPLDIA?W@;6f_A3
+!s100 3k8GaMN1@QLoLjTjW2zYk0
+I0V99aTHFH76kO?zFGm;<S1
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z3 w1494250128
-8C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v
+Z3 w1494634877
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ADDER.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ADDER.v
 L0 1
 Z4 OV;L;10.4d;61
 r1
 !s85 0
 31
-Z5 !s108 1494438088.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/ADDER.v|
+Z5 !s108 1494777797.000000
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ADDER.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ADDER.v|
 !i113 1
 Z6 o-vlog01compat -work work
-Z7 !s92 -vlog01compat -work work +incdir+C:/Users/luong/Desktop/ktmt/Assignment_2
+Z7 !s92 -vlog01compat -work work {+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2}
 n@a@d@d@e@r
 vALU
-Z8 !s110 1494438085
+Z8 !s110 1494777796
 !i10b 1
-!s100 J5l2N9Bz6iQ]QR3zIj>V42
-I7^j]l>H>;4BlQhokf3J:e2
+!s100 ?TPG58TQ<=9Lj@cizd2XM3
+ICTMZmnY?cgMdCSB<:QD7i3
 R2
 R0
-R3
-8C:/Users/luong/Desktop/ktmt/Assignment_2/ALU.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/ALU.v
+w1494777531
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z9 !s108 1494438085.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/ALU.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/ALU.v|
+Z9 !s108 1494777796.000000
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU.v|
 !i113 1
 R6
 R7
@@ -56,42 +56,42 @@ vALU_CONTROL
 R8
 !i10b 1
 !s100 Gj:lehaeH6RGHNLRA;ZB40
-I=m93905I:Y1g5cek<<I5A2
+IRcdOL:k9U;Z3`UM`_b7SR3
 R2
 R0
-w1494431962
-8C:/Users/luong/Desktop/ktmt/Assignment_2/ALU_CONTROL.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/ALU_CONTROL.v
+R3
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU_CONTROL.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU_CONTROL.v
 L0 1
 R4
 r1
 !s85 0
 31
 R9
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/ALU_CONTROL.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/ALU_CONTROL.v|
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU_CONTROL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/ALU_CONTROL.v|
 !i113 1
 R6
 R7
 n@a@l@u_@c@o@n@t@r@o@l
 vAND_BRANCH
-Z10 !s110 1494438093
+Z10 !s110 1494777799
 !i10b 1
 !s100 l?^5leLcQ>G@gbn?W=1Ca2
-IG9SG7JUfhIZ6JhTFgd[f[2
+I3jKR:cWZJD`W3=THfihWS0
 R2
 R0
-Z11 w1494302111
-8C:/Users/luong/Desktop/ktmt/Assignment_2/and_branch.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/and_branch.v
+R3
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/and_branch.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/and_branch.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z12 !s108 1494438093.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/and_branch.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/and_branch.v|
+Z11 !s108 1494777799.000000
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/and_branch.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/and_branch.v|
 !i113 1
 R6
 R7
@@ -99,329 +99,416 @@ n@a@n@d_@b@r@a@n@c@h
 vCONTROL
 R1
 !i10b 1
-!s100 6lo5:dXY[^<Zg8dH3BH_o3
-IKD;J6G2;QP?eYUL@NP^V80
+!s100 i>z[_i@n40?YCElUVbS=Y2
+I:=j32hd^6YA:L:B=PA3b@3
 R2
 R0
-R3
-8C:/Users/luong/Desktop/ktmt/Assignment_2/CONTROL.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/CONTROL.v
+w1494649268
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/CONTROL.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/CONTROL.v
 L0 1
 R4
 r1
 !s85 0
 31
 R5
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/CONTROL.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/CONTROL.v|
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/CONTROL.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/CONTROL.v|
 !i113 1
 R6
 R7
 n@c@o@n@t@r@o@l
 vDMEM
-Z13 !s110 1494438087
+R1
 !i10b 1
-!s100 zNPQJ6BmmR0d:gH>cQ^AJ2
-IC>aU8M9Q7B9E0C4LDU3603
+!s100 Rf^gBL7jC13F1Baa`=J2]1
+Id<hDV62G;Pg8J]BZJFT1D3
 R2
 R0
-R3
-8C:/Users/luong/Desktop/ktmt/Assignment_2/DMEM.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/DMEM.v
+w1494644924
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/DMEM.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/DMEM.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z14 !s108 1494438087.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/DMEM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/DMEM.v|
+R5
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/DMEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/DMEM.v|
 !i113 1
 R6
 R7
 n@d@m@e@m
-vIMEM
-!s110 1494438086
+vEPC
+R10
 !i10b 1
-!s100 H;KPg@@k0;k<7LJ]UeiFg3
-IF94<>PBiB^0]g1GfbzMPW3
+!s100 H=Jbj4c56U@0HGm8NKgg>0
+I6SXcAbKRmUE_MSYe;e^4i1
 R2
 R0
-w1494436141
-8C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v
+w1494663735
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/epc.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/epc.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z15 !s108 1494438086.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM.v|
+R11
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/epc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/epc.v|
+!i113 1
+R6
+R7
+n@e@p@c
+vEXCEPTION_HANDLE
+Z12 !s110 1494777798
+!i10b 1
+!s100 b0Af<j@hDQK?:b^6h]Gem2
+Ie5VZo<8L7>1[J>IhekaJT3
+R2
+R0
+w1494646191
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/EXCEPTION_HANDLE.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/EXCEPTION_HANDLE.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z13 !s108 1494777798.000000
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/EXCEPTION_HANDLE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/EXCEPTION_HANDLE.v|
+!i113 1
+R6
+R7
+n@e@x@c@e@p@t@i@o@n_@h@a@n@d@l@e
+vhexto7segment
+Z14 !s110 1494777800
+!i10b 1
+!s100 9>XIYBPc^jCRi^CPRZP6]1
+IaOROBDje<43l[oXTFE3N@1
+R2
+R0
+w1494661966
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/hexto7segment.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/hexto7segment.v
+L0 1
+R4
+r1
+!s85 0
+31
+Z15 !s108 1494777800.000000
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/hexto7segment.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/hexto7segment.v|
+!i113 1
+R6
+R7
+vIMEM
+R1
+!i10b 1
+!s100 EKbFdaXIGWhfBQ@fUD:mb3
+Iz>^b5OQEhj4S`f5_U7n`X2
+R2
+R0
+w1494649627
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM.v
+L0 1
+R4
+r1
+!s85 0
+31
+R9
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM.v|
 !i113 1
 R6
 R7
 n@i@m@e@m
 vIMEM_BRAM
-Z16 !s110 1494438092
+R10
 !i10b 1
 !s100 co2>VKQJ9[fTL6IH5hEkS0
-IL<WH5LcO[D4@4;NTgj9670
+IIzU[FPcWh[jA]dG<n31UU3
 R2
 R0
-w1494337001
-8C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v
+R3
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM_BRAM.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM_BRAM.v
 L0 40
 R4
 r1
 !s85 0
 31
-Z17 !s108 1494438092.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/IMEM_BRAM.v|
+R11
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM_BRAM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/IMEM_BRAM.v|
 !i113 1
 R6
 R7
 n@i@m@e@m_@b@r@a@m
 vMUX
-R13
+R1
 !i10b 1
 !s100 LRAGWV;XS@I@1mdml;C]Z3
-Ia[o<oY9`WUB?ezJ[o3o>N2
+I[hHaXKMfeLe^g<]SF;:9S0
 R2
 R0
-R11
-8C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v
+w1494719703
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/MUX.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/MUX.v
 L0 1
 R4
 r1
 !s85 0
 31
-R14
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/MUX.v|
+R5
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/MUX.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/MUX.v|
 !i113 1
 R6
 R7
 n@m@u@x
-vPC
+vMUX_8
 R10
 !i10b 1
-!s100 DalK@8al`VVelCK7a;m[13
-IPi0jQ<_Ld2i0clXhRaNGS1
+!s100 9cXfBofB7mWA2Edn5mjB]1
+I74QgJV5J7d_<[ZDfoLiN^1
 R2
 R0
-w1494437818
-8C:/Users/luong/Desktop/ktmt/Assignment_2/PC.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/PC.v
+w1494720683
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/mux_8.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/mux_8.v
 L0 1
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/PC.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/PC.v|
+R11
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/mux_8.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/mux_8.v|
+!i113 1
+R6
+R7
+n@m@u@x_8
+vPC
+R10
+!i10b 1
+!s100 FQQ5[Wo_Wn>zDJ:JQI=4G2
+IEVbfH0:BnP9a6@^7FAQeU3
+R2
+R0
+w1494665104
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/PC.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/PC.v
+L0 1
+R4
+r1
+!s85 0
+31
+R11
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/PC.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/PC.v|
 !i113 1
 R6
 R7
 n@p@c
 vREG
-R13
+R1
 !i10b 1
-!s100 ;YIR2SHH47?^I9hJd<d^c3
-If8ZK=iY]gj=hD`6N2klfl3
+!s100 Bf96=jdO?z3l:6f6Jh7351
+I:?`j8aKIF7>;GB]1Zh[E13
 R2
 R0
-w1494388103
-8C:/Users/luong/Desktop/ktmt/Assignment_2/REG.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/REG.v
+w1494663178
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG.v
 L0 1
 R4
 r1
 !s85 0
 31
-R15
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/REG.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/REG.v|
+R5
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG.v|
 !i113 1
 R6
 R7
 n@r@e@g
 vREG_EXE_MEM
-!s110 1494438091
+R12
 !i10b 1
-!s100 NS_Ac15bMkGH`NoQbG3OB3
-I_KDFe<PHI@`V^@X^Y>3nL2
+!s100 A_AX<La=Y3b@eMf5LJHkm3
+ITg^67OE<^c=4WfT=IMUA]2
 R2
 R0
-R3
-8C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v
+w1494755558
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_EXE_MEM.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_EXE_MEM.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z18 !s108 1494438091.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/REG_EXE_MEM.v|
+R13
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_EXE_MEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_EXE_MEM.v|
 !i113 1
 R6
 R7
 n@r@e@g_@e@x@e_@m@e@m
 vREG_ID_EXE
-Z19 !s110 1494438090
+R1
 !i10b 1
-!s100 V57=CbFc@2;V=Wa[J>HMk1
-I3`on;`C7dEZIelE4G9lEX0
+!s100 O@9Jhz7Tam15CEF1_<_zI2
+INNlbDBjCKkM;MI2j8@Cc73
 R2
 R0
-w1494416496
-8C:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v
+w1494755438
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_ID_EXE.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_ID_EXE.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z20 !s108 1494438090.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/REG_ID_EXE.v|
+R5
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_ID_EXE.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_ID_EXE.v|
 !i113 1
 R6
 R7
 n@r@e@g_@i@d_@e@x@e
 vREG_IF_ID
-R19
+R1
 !i10b 1
-!s100 O0LZ_goa?^1h18Yh7@7O30
-INJEf0NLR;B5K5mdeb7Ya23
+!s100 j9lVRDF]IZmG<?2XQ55Xb3
+IJnXcaZk579?Boz?;:E`7j2
 R2
 R0
-R3
-8C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v
+w1494768354
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_IF_ID.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_IF_ID.v
 L0 1
 R4
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/REG_IF_ID.v|
+R5
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_IF_ID.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_IF_ID.v|
 !i113 1
 R6
 R7
 n@r@e@g_@i@f_@i@d
 vREG_MEM_WB
-R16
+R12
 !i10b 1
-!s100 lagcMo8TCO[C;APUU6^3N1
-IB?fAbUQZak<Vc4g_]l3ko3
+!s100 QFVZaIC=I_Zla2GX_6@X:0
+I1C<S?h0B_aD48]JVgziYT3
 R2
 R0
-R3
-8C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v
+w1494755747
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_MEM_WB.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_MEM_WB.v
 L0 1
 R4
 r1
 !s85 0
 31
-R18
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/REG_MEM_WB.v|
+R13
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_MEM_WB.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/REG_MEM_WB.v|
 !i113 1
 R6
 R7
 n@r@e@g_@m@e@m_@w@b
 vSHIFT_LEFT_2
-Z21 !s110 1494438089
+R1
 !i10b 1
 !s100 Z[ogZABi`^_hK^Nba]^M]1
-IN`2engS@0L;CoF6OHMT]F0
+I1lk2CZ?l_9f_8Q3iX1giB2
 R2
 R0
-R3
-8C:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v
+Z16 w1494634878
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SHIFT_LEFT_2.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SHIFT_LEFT_2.v
 L0 1
 R4
 r1
 !s85 0
 31
-Z22 !s108 1494438089.000000
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/SHIFT_LEFT_2.v|
+R5
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SHIFT_LEFT_2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SHIFT_LEFT_2.v|
 !i113 1
 R6
 R7
 n@s@h@i@f@t_@l@e@f@t_2
 vSIGN_EXTEND
-R21
+R1
 !i10b 1
 !s100 Q0587edBJdzHGG9hLVYO61
-Ik1[:TANRkA3X7jXD[L]WV2
+I3Gb16P:eb]9gJ8iTdL1YF1
 R2
 R0
-w1494411477
-8C:/Users/luong/Desktop/ktmt/Assignment_2/SIGN_EXTEND.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/SIGN_EXTEND.v
+R16
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SIGN_EXTEND.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SIGN_EXTEND.v
 L0 1
 R4
 r1
 !s85 0
 31
-R22
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/SIGN_EXTEND.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/SIGN_EXTEND.v|
+R5
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SIGN_EXTEND.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SIGN_EXTEND.v|
 !i113 1
 R6
 R7
 n@s@i@g@n_@e@x@t@e@n@d
 vSYSTEM
-R16
+R12
 !i10b 1
-!s100 H=QiQ^l5d4nk9fRcGF=CH2
-IdX`cza8UoziagKd@e^5je3
+!s100 `]:5df6W_z918oRo<>b1@1
+I[3zDBh5be7Kb[BL5QRz4]2
 R2
 R0
-w1494437384
-8C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v
+w1494776274
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SYSTEM.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SYSTEM.v
 L0 1
 R4
 r1
 !s85 0
 31
-R17
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/SYSTEM.v|
+R13
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/SYSTEM.v|
 !i113 1
 R6
 R7
 n@s@y@s@t@e@m
 vt_SYSTEM
-R10
+R14
 !i10b 1
-!s100 OJU0oTzhg5JFDdGdG2?5g3
-Im3TcG`^_Df4<RYc^Q7hKP1
+!s100 O4F0EMeMJ8jYE7?zE73Rg0
+IHg[2M_O7M;U4zj:Q92d_R2
 R2
 R0
-w1494437417
-8C:/Users/luong/Desktop/ktmt/Assignment_2/t_SYSTEM.v
-FC:/Users/luong/Desktop/ktmt/Assignment_2/t_SYSTEM.v
+w1494776280
+8F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/t_SYSTEM.v
+FF:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/t_SYSTEM.v
 L0 2
 R4
 r1
 !s85 0
 31
-R12
-!s107 C:/Users/luong/Desktop/ktmt/Assignment_2/t_SYSTEM.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/luong/Desktop/ktmt/Assignment_2|C:/Users/luong/Desktop/ktmt/Assignment_2/t_SYSTEM.v|
+R15
+!s107 F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/t_SYSTEM.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2|F:/Document/Study/Semester 4th/Computer Architecture/Assignment_KTMT/Assignment_2/t_SYSTEM.v|
 !i113 1
 R6
 R7

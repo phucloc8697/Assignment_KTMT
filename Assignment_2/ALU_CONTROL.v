@@ -51,13 +51,12 @@ always @(ALU_op,Funct) begin
 				
 			//else if(Funct==6'bxxxx)				// phep chia
 			//	ALU_control=4'b0100;
-			
-			else if(Funct==6'h00)					// dich trai
+			else if(Funct==6'h00)
 				ALU_control=4'b1010;
 			
-			else if(Funct==6'h02)					// dich phai 
+			else if(Funct==6'h02)
 				ALU_control=4'b1011;
-			
+				
 			else ALU_control=4'dx;					// truong hop ko xac dinh
 		end
 		default: ALU_control=4'dx;

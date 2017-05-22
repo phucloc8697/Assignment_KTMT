@@ -1,5 +1,5 @@
 Flow report for Assignment_2
-Thu May 11 00:38:33 2017
+Sun May 14 22:59:12 2017
 Quartus Prime Version 16.0.0 Build 211 04/27/2016 SJ Lite Edition
 
 
@@ -41,20 +41,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu May 11 00:38:32 2017       ;
+; Flow Status                        ; Successful - Sun May 14 22:59:12 2017       ;
 ; Quartus Prime Version              ; 16.0.0 Build 211 04/27/2016 SJ Lite Edition ;
 ; Revision Name                      ; Assignment_2                                ;
 ; Top-level Entity Name              ; SYSTEM                                      ;
 ; Family                             ; Cyclone IV GX                               ;
 ; Device                             ; EP4CGX150DF31C7                             ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 13,680                                      ;
-;     Total combinational functions  ; 6,665                                       ;
-;     Dedicated logic registers      ; 7,111                                       ;
-; Total registers                    ; 7111                                        ;
-; Total pins                         ; 452                                         ;
+; Total logic elements               ; 130                                         ;
+;     Total combinational functions  ; 96                                          ;
+;     Dedicated logic registers      ; 40                                          ;
+; Total registers                    ; 40                                          ;
+; Total pins                         ; 680                                         ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 15,104                                      ;
+; Total memory bits                  ; 8,192                                       ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
 ; Total GXB Receiver Channel PCS     ; 0                                           ;
 ; Total GXB Receiver Channel PMA     ; 0                                           ;
@@ -69,7 +69,7 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/11/2017 00:37:07 ;
+; Start date & time ; 05/14/2017 22:58:53 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Assignment_2        ;
 +-------------------+---------------------+
@@ -80,7 +80,7 @@ agreement for further details.
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                      ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
 +--------------------------------------+---------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                ; 159495741470.149443782707108          ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                ; 9218722839026.149477753306352         ; --            ; --          ; --             ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; t_SYSTEM       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                    ; --            ; --          ; t_IMEM         ;
 ; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; t_SYSTEM                              ; --            ; --          ; eda_simulation ;
@@ -116,8 +116,8 @@ agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:01:23     ; 1.0                     ; 972 MB              ; 00:01:17                           ;
-; Total                ; 00:01:23     ; --                      ; --                  ; 00:01:17                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 943 MB              ; 00:00:38                           ;
+; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -126,7 +126,7 @@ agreement for further details.
 +----------------------+------------------+-----------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
 +----------------------+------------------+-----------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-0OS5FE2  ; Windows 8 ; 6.2        ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-LIDNJBO  ; Windows 8 ; 6.2        ; x86_64         ;
 +----------------------+------------------+-----------+------------+----------------+
 
 

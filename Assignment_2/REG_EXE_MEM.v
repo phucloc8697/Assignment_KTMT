@@ -32,18 +32,27 @@ output reg [1:0] control_wb_out;
 output reg [31:0] branch_address_out, ALU_result_out, read_data_2_out, reg_dst_address_out;
 
 reg check;
-always@(posedge CLK) begin
-	if(!check)
-		control_mem_out <= control_mem_in;
-	else control_mem_out <= 3'd0;
-	if(!check)
+always@(posedge CLK or negedge RESET) begin
+	if(!RESET) begin
+		control_mem_out <= 0;
+		control_wb_out <= 0;
+		branch_address_out <=0;
+		ALU_result_out <=0;
+		ALU_status_out <=0;
+		read_data_2_out <=0;
+		reg_dst_address_out <=0;
+	end
+	else begin 
+		if(!check)
+			control_mem_out <= control_mem_in;
+		else control_mem_out <= 3'd0;
 		control_wb_out <= control_wb_in;
-	else control_wb_out <= 2'd0;
-	branch_address_out <= branch_address_in;
-	ALU_result_out <= ALU_result_in;
-	ALU_status_out <= ALU_status_in;
-	read_data_2_out <= read_data_2_in;
-	reg_dst_address_out <= reg_dst_address_in;
+		branch_address_out <= branch_address_in;
+		ALU_result_out <= ALU_result_in;
+		ALU_status_out <= ALU_status_in;
+		read_data_2_out <= read_data_2_in;
+		reg_dst_address_out <= reg_dst_address_in;
+	end
 end
 
 always @(*) begin

@@ -7,7 +7,6 @@ module t_ALU;
 	wire [7:0] ALU_status;
 	
 	ALU ALU(
-	.RESET(RESET),
 	.ALU_control(ALU_control),
 	.ALU_operand_1(ALU_operand_1),
 	.ALU_operand_2(ALU_operand_2),
@@ -51,10 +50,10 @@ module t_ALU;
 			ALU_operand_2=32'd10;
 		#10 ALU_operand_2=32'd3;
 		#10 ALU_control=4'b1010;
-			ALU_operand_1=32'h00000100;
-			ALU_operand_2=32'd0;
-		#10 ALU_operand_2=32'd1;
-		#10 ALU_operand_2=32'd3;
+			ALU_operand_1=32'h0000004;
+			ALU_operand_2=32'd3;
+		#10 ALU_operand_2=32'd2;
+		#10 ALU_operand_2=32'd5;
 		#10 ALU_operand_1=32'd1;
 			ALU_operand_2=32'd32;
 		#10 ALU_operand_2=32'd31;

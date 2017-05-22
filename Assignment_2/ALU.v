@@ -1,12 +1,10 @@
 module ALU (
-	RESET,
 	ALU_control,
 	ALU_operand_1,
 	ALU_operand_2,
 	ALU_result,
 	ALU_status
 );
-input RESET;
 input [3:0] ALU_control;
 input [31:0] ALU_operand_1,ALU_operand_2;
 output reg [31:0] ALU_result;
@@ -14,23 +12,18 @@ wire [63:0] mul_result;
 output reg [7:0] ALU_status;
 
 wire sign;
-wire [31:0] temp1,temp2,temp3,temp_addsub,a1,a2,ALU_operand_2sub,temp2_sub,a2_sub,shift_result;
+wire [31:0] temp1,temp2,temp3,temp_addsub,a1,a2,ALU_operand_2sub,temp2_sub,a2_sub;
 wire [63:0] temp_mul,a3;
 wire [32:0] temp_add;
 wire [16:0] check_carry;
 wire [32:0] check_addsub;
-//wire [32:0] shift_value[1:31];
+wire [31:0] shift_result;
 
-//assign shift_value[1]=32'd2;
-/*generate
-genvar i;
-	for(i=2;i<=31;i=i+1) begin: shiftvalue							// cac gia tri shift
-		assign shift_value[i]=2*shift_value[i-1];
-	end
-endgenerate*/
+
 //assign shift_result=(ALU_operand_2>=32'd1&&ALU_operand_2<=32'd31)?(shift_value[ALU_operand_2[4:0]])*ALU_operand_1:32'd0;
 
-assign shift_result=(ALU_control==4'b1010)?ALU_operand_1<<ALU_operand_2:ALU_operand_1>>ALU_operand_2;
+assign shift_result=(ALU_control==4'b1010)?(ALU_operand_2<<ALU_operand_1[4:0]):(ALU_operand_2>>ALU_operand_1[4:0]);
+
 assign sign=ALU_operand_1[31]^ALU_operand_2[31];	//dau cua ket qua (nhan,cong)
 
 assign a1=(ALU_operand_1[31])?32'hffffffff:32'd0;
@@ -116,9 +109,7 @@ end
 
 /////////////////////////
 always @(*) begin
-	if(!RESET)
-		ALU_result = 32'd0;
-	else if(ALU_control==4'b0010||ALU_control==4'b0110) begin	// phep cong tru lw sw lh sh
+ if(ALU_control==4'b0010||ALU_control==4'b0110) begin	// phep cong tru lw sw lh sh
 		if(!ALU_status[6])
 			ALU_result=temp_add;
 		else ALU_result=32'dx;

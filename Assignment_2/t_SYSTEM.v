@@ -7,7 +7,7 @@ module t_SYSTEM;
 	wire [7:0] w_inst_address,w_alu_status,w_alu_status_mem,w_inst_address_mem,w_inst_address_exe,w_inst_adder0
 					,w_mux1,w_mux0;
 	wire [31:0] w_inst_val,w_inst_val_id,w_read_data1,w_read_data2,w_sign_extend,w_read_data1_exe,w_read_data2_exe,w_sign_extend_exe,w_alu_result,w_mux2,
-					w_alu_result_mem,w_read_data2_mem,w_mem_data,w_mem_data_wb,w_alu_result_wb,w_mux4;
+					w_alu_result_mem,w_read_data2_mem,w_mem_data,w_mem_data_wb,w_alu_result_wb,w_mux4,w_read_data1_shamt;
 	wire [3:0] w_control_exe,w_control_exe_exe,w_alu_control,w_regDest_wb;
 	wire [2:0] w_control_mem,w_control_mem_exe,w_control_mem_mem;
 	wire [1:0] w_control_wb,w_control_wb_exe,w_control_wb_mem,w_control_wb_wb;
@@ -71,7 +71,8 @@ module t_SYSTEM;
 	.w_regDest_wb(w_regDest_wb),
 	
 	.w_exception(w_exception),
-	.w_control_exception(w_control_exception)
+	.w_control_exception(w_control_exception),
+	.w_read_data1_shamt(w_read_data1_shamt)
 );
 	initial begin
 		#50

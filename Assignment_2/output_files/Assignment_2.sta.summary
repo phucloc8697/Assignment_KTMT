@@ -2,28 +2,112 @@
 TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SYS_output_sel[0]'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 85C Model Setup 'SYS_clk'
+Slack : -120.403
+TNS   : -2156.404
 
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SYS_reset'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 85C Model Setup 'CLK_50'
+Slack : -11.821
+TNS   : -29745.588
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SYS_output_sel[0]'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 85C Model Setup 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : -4.342
+TNS   : -29.609
 
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SYS_reset'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 85C Model Hold 'SYS_clk'
+Slack : -0.039
+TNS   : -0.082
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SYS_output_sel[0]'
-Slack : -3.000
-TNS   : -3.000
+Type  : Slow 1200mV 85C Model Hold 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : 0.462
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SYS_reset'
+Type  : Slow 1200mV 85C Model Hold 'CLK_50'
+Slack : 1.184
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'CLK_50'
 Slack : -3.000
-TNS   : -3.000
+TNS   : -4862.720
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'SYS_clk'
+Slack : -3.000
+TNS   : -424.500
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : 0.339
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'SYS_clk'
+Slack : -108.441
+TNS   : -1935.004
+
+Type  : Slow 1200mV 0C Model Setup 'CLK_50'
+Slack : -10.892
+TNS   : -27285.771
+
+Type  : Slow 1200mV 0C Model Setup 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : -4.182
+TNS   : -28.544
+
+Type  : Slow 1200mV 0C Model Hold 'SYS_clk'
+Slack : -0.142
+TNS   : -0.694
+
+Type  : Slow 1200mV 0C Model Hold 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : 0.546
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'CLK_50'
+Slack : 1.208
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -4860.960
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'SYS_clk'
+Slack : -3.000
+TNS   : -424.500
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : 0.265
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'SYS_clk'
+Slack : -59.596
+TNS   : -1008.530
+
+Type  : Fast 1200mV 0C Model Setup 'CLK_50'
+Slack : -5.792
+TNS   : -13274.253
+
+Type  : Fast 1200mV 0C Model Setup 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : -1.813
+TNS   : -11.530
+
+Type  : Fast 1200mV 0C Model Hold 'SYS_clk'
+Slack : 0.007
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : 0.087
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'CLK_50'
+Slack : 0.444
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'CLK_50'
+Slack : -3.000
+TNS   : -3292.879
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'SYS_clk'
+Slack : -3.000
+TNS   : -363.656
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'REG_IF_ID:REG_IF_ID|instruction_out[26]'
+Slack : 0.344
+TNS   : 0.000
 
 ------------------------------------------------------------

@@ -112,11 +112,27 @@
 					"strict" : false
 				},
 				{
-					"name" : "w_inst_address[0]",
+					"name" : "w_inst_adder0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "w_inst_address[1]",
+					"name" : "w_inst_adder0[3]",
+					"strict" : false
+				},
+				{
+					"name" : "w_inst_adder0[4]",
+					"strict" : false
+				},
+				{
+					"name" : "w_inst_adder0[5]",
+					"strict" : false
+				},
+				{
+					"name" : "w_inst_adder0[6]",
+					"strict" : false
+				},
+				{
+					"name" : "w_inst_adder0[7]",
 					"strict" : false
 				},
 				{
@@ -400,262 +416,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "w_read_data1[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[8]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[9]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[10]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[11]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[12]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[13]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[14]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[15]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[16]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[17]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[18]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[19]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[20]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[21]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[22]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[23]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[24]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[25]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[26]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[27]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[28]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[29]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[30]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1[31]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[8]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[9]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[10]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[11]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[12]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[13]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[14]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[15]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[16]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[17]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[18]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[19]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[20]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[21]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[22]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[23]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[24]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[25]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[26]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[27]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[28]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[29]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[30]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2[31]",
-					"strict" : false
-				},
-				{
 					"name" : "w_sign_extend[0]",
 					"strict" : false
 				},
@@ -820,787 +580,59 @@
 					"strict" : false
 				},
 				{
-					"name" : "w_control_exe_exe[0]",
+					"name" : "w_mux1[2]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_exe_exe[1]",
+					"name" : "w_mux1[3]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_exe_exe[2]",
+					"name" : "w_mux1[4]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_exe_exe[3]",
+					"name" : "w_mux1[5]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_mem_exe[0]",
+					"name" : "w_mux1[6]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_mem_exe[1]",
+					"name" : "w_mux1[7]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_mem_exe[2]",
+					"name" : "w_mux0[2]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_wb_exe[0]",
+					"name" : "w_mux0[3]",
 					"strict" : false
 				},
 				{
-					"name" : "w_control_wb_exe[1]",
+					"name" : "w_mux0[4]",
 					"strict" : false
 				},
 				{
-					"name" : "w_alu_op_exe[0]",
+					"name" : "w_mux0[5]",
 					"strict" : false
 				},
 				{
-					"name" : "w_alu_op_exe[1]",
+					"name" : "w_mux0[6]",
 					"strict" : false
 				},
 				{
-					"name" : "w_alu_op_exe[2]",
+					"name" : "w_mux0[7]",
 					"strict" : false
 				},
 				{
-					"name" : "w_alu_op_exe[3]",
+					"name" : "w_alu_status_mem[7]",
 					"strict" : false
 				},
 				{
-					"name" : "w_alu_op_exe[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_op_exe[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[8]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[9]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[10]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[11]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[12]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[13]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[14]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[15]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[16]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[17]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[18]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[19]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[20]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[21]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[22]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[23]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[24]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[25]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[26]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[27]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[28]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[29]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[30]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data1_exe[31]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[8]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[9]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[10]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[11]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[12]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[13]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[14]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[15]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[16]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[17]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[18]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[19]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[20]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[21]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[22]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[23]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[24]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[25]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[26]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[27]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[28]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[29]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[30]",
-					"strict" : false
-				},
-				{
-					"name" : "w_read_data2_exe[31]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[8]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[9]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[10]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[11]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[12]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[13]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[14]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[15]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[16]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[17]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[18]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[19]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[20]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[21]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[22]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[23]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[24]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[25]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[26]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[27]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[28]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[29]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[30]",
-					"strict" : false
-				},
-				{
-					"name" : "w_sign_extend_exe[31]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rt_exe[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rt_exe[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rt_exe[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rt_exe[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rt_exe[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rd_exe[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rd_exe[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rd_exe[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rd_exe[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_rd_exe[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[8]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[9]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[10]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[11]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[12]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[13]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[14]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[15]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[16]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[17]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[18]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[19]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[20]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[21]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[22]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[23]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[24]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[25]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[26]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[27]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[28]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[29]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[30]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_result[31]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_status[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_status[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_status[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_status[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_status[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_status[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_control[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_control[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_control[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_alu_control[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[0]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[1]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[2]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[3]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[4]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[5]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[6]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[7]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[8]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[9]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[10]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[11]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[12]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[13]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[14]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[15]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[16]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[17]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[18]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[19]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[20]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[21]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[22]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[23]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[24]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[25]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[26]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[27]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[28]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[29]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[30]",
-					"strict" : false
-				},
-				{
-					"name" : "w_mux2[31]",
-					"strict" : false
-				},
-				{
-					"name" : "SYS_output_sel[0]",
+					"name" : "w_control_exception",
 					"strict" : false
 				},
 				{
@@ -1612,10 +644,6 @@
 					"strict" : false
 				},
 				{
-					"name" : "SYS_output_sel[3]",
-					"strict" : false
-				},
-				{
 					"name" : "SYS_output_sel[4]",
 					"strict" : false
 				},
@@ -1624,7 +652,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SYS_output_sel[6]",
+					"name" : "SYS_output_sel[3]",
 					"strict" : false
 				},
 				{
@@ -1632,11 +660,15 @@
 					"strict" : false
 				},
 				{
-					"name" : "SYS_reset",
+					"name" : "SYS_output_sel[6]",
 					"strict" : false
 				},
 				{
-					"name" : "SYS_pc_val[0]",
+					"name" : "SYS_output_sel[0]",
+					"strict" : false
+				},
+				{
+					"name" : "CLK_50",
 					"strict" : false
 				},
 				{
@@ -1644,31 +676,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "SYS_pc_val[1]",
-					"strict" : false
-				},
-				{
-					"name" : "SYS_pc_val[2]",
-					"strict" : false
-				},
-				{
-					"name" : "SYS_pc_val[3]",
-					"strict" : false
-				},
-				{
-					"name" : "SYS_pc_val[4]",
-					"strict" : false
-				},
-				{
-					"name" : "SYS_pc_val[5]",
-					"strict" : false
-				},
-				{
-					"name" : "SYS_pc_val[6]",
-					"strict" : false
-				},
-				{
-					"name" : "SYS_pc_val[7]",
+					"name" : "SYS_reset",
 					"strict" : false
 				}
 			]

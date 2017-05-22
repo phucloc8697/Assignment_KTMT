@@ -4,7 +4,8 @@ module CONTROL (
 	control_mem,
 	control_wb,
 	control_jump,
-	control_exception
+	control_exception,
+	control_out_datamem
 );
 
 input [31:0] opcode;
@@ -12,10 +13,11 @@ output [3:0] control_exe;
 output [2:0] control_mem;
 output [1:0] control_wb;
 output control_jump, control_exception;
+output [1:0] control_out_datamem;
 
 reg RegDst, RegWrite, ALUsrc, Exception, Mem2Reg, MemWrite, MemRead, Branch, Jump;
 reg [1:0] ALUop;
-
+reg [1:0] data_mem;
 assign control_exe[0] = RegDst;
 assign control_exe[1] = ALUsrc;
 assign control_exe[3:2] = ALUop;
@@ -26,8 +28,11 @@ assign control_mem[2] = Branch;
 
 assign control_wb[0] = RegWrite;
 assign control_wb[1] = Mem2Reg;
+assign control_jump = Jump;
 
 assign control_exception = Exception;
+
+assign control_out_datamem = data_mem;
 
 always@(*) begin
 
@@ -47,6 +52,7 @@ always@(*) begin
 			if( opcode[15:11] ==5'd0)
 				Exception = 1;
 			else Exception = 0;
+			data_mem = 2'd0;
 		end
 		// addi
 		6'd8: begin
@@ -62,6 +68,7 @@ always@(*) begin
 			if( opcode[20:16] ==5'd0)
 				Exception = 1;
 			else Exception = 0;
+			data_mem = 2'd0;
 		end
 		// lbu
 		6'd36: begin
@@ -75,6 +82,7 @@ always@(*) begin
 			MemRead = 1;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// lb
 		6'd32: begin
@@ -90,6 +98,7 @@ always@(*) begin
 			if( opcode[20:16] ==5'd0)
 				Exception = 1;
 			else Exception = 0;
+			data_mem = 2'd1;
 		end
 		// lw
 		6'd35: begin
@@ -105,6 +114,7 @@ always@(*) begin
 			if( opcode[20:16] ==5'd0)
 				Exception = 1;
 			else Exception = 0;
+			data_mem = 2'd3;
 		end
 		// sb
 		6'd40: begin
@@ -118,6 +128,7 @@ always@(*) begin
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// slti
 		6'd10: begin
@@ -131,6 +142,7 @@ always@(*) begin
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// andi
 		6'd12: begin
@@ -146,12 +158,13 @@ always@(*) begin
 			if( opcode[20:16] ==5'd0)
 				Exception = 1;
 			else Exception = 0;
+			data_mem = 2'd0;
 		end
 		// beq
 		6'd4: begin
 			RegDst = 1'bx;
 			RegWrite = 0;
-			ALUsrc = 1;
+			ALUsrc = 0;
 			Exception = 0;
 			ALUop = 2'b01;
 			Mem2Reg = 2'bx;
@@ -159,6 +172,7 @@ always@(*) begin
 			MemRead = 0;
 			Branch = 1;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// lhu
 		6'd37: begin
@@ -172,9 +186,10 @@ always@(*) begin
 			MemRead = 1;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// lh
-		6'd32: begin
+		6'd33: begin
 			RegDst = 0;
 			RegWrite = 1;
 			ALUsrc = 1;
@@ -185,6 +200,7 @@ always@(*) begin
 			MemRead = 1;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd2;
 		end
 		// sw
 		6'd43: begin
@@ -198,6 +214,7 @@ always@(*) begin
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// sh
 		6'd41: begin
@@ -211,6 +228,7 @@ always@(*) begin
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// sltiu
 		6'd11: begin
@@ -224,6 +242,7 @@ always@(*) begin
 			MemRead = 0;
 			Branch = 0;
 			Jump = 0;
+			data_mem = 2'd0;
 		end
 		// ori
 		6'd13: begin
@@ -239,6 +258,7 @@ always@(*) begin
 			if( opcode[20:16] ==5'd0)
 				Exception = 1;
 			else Exception = 0;
+			data_mem = 2'd0;
 		end
 		// bne
 		6'd5: begin
@@ -252,6 +272,21 @@ always@(*) begin
 			MemRead = 0;
 			Branch = 1;
 			Jump = 0;
+			data_mem = 2'd0;
+		end
+		// jump
+		6'h02: begin
+			RegDst = 1'bx;
+			RegWrite = 0;
+			ALUsrc = 1;
+			Exception = 0;
+			ALUop = 2'b01;
+			Mem2Reg = 1'bx;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 1;
+			data_mem = 2'd0;
 		end
 		
 		default: begin

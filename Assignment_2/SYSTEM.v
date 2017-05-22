@@ -52,10 +52,12 @@ module SYSTEM (
 	w_mem_data_wb,
 	w_alu_result_wb,
 	w_regDest_wb,
+	w_control_jump,
 	
 	w_exception,
 	w_control_exception,
-	w_read_data1_shamt
+	w_read_data1_shamt,
+	w_adder_jump
 );
 
 input SYS_clk, SYS_reset, SYS_load,CLK_50;
@@ -80,8 +82,9 @@ wire [4:0]	w_rt,
 output [2:0] 	w_control_mem;
 output [3:0] w_control_exe;
 output [1:0] 	w_control_wb;
-wire 			w_control_jump;
+output 			w_control_jump;
 output 				w_control_exception;
+wire [1:0] w_control_datamem;
 // Khoi EXE
 wire [31:0] w_regDest,
 			//	w_read_data1_exe,
@@ -105,6 +108,7 @@ output [2:0] 	w_control_mem_exe;
 output [1:0] 	w_control_wb_exe;
 wire 			w_alu_exception;
 output		w_exception;
+wire [1:0] w_control_datamem_exe;
 // Khoi MEM
 output  [31:0] w_read_data2_mem;
 output [31:0]				w_mem_data;
@@ -116,6 +120,8 @@ output  [2:0]	w_control_mem_mem;
 output [1:0]	w_control_wb_mem;
 output [7:0] w_inst_address_mem;
 wire			w_branch;
+wire [31:0] w_mem_datasel;
+wire [1:0] w_control_datamem_mem;
 // Khoi WB
 output  [31:0] w_alu_result_wb;
 output [31:0]		w_mux4;
@@ -123,10 +129,10 @@ output [31:0] w_mem_data_wb;
 output  [4:0]	w_regDest_wb;
 output [1:0] 	w_control_wb_wb;
 //	Other
-wire [31:0] w_adder_jump;
+output [7:0] w_adder_jump;
 output [31:0] w_read_data1_shamt;
 output [7:0]				w_mux0;
-wire [27:0] w_shift_left0;
+wire [31:0] w_shift_left0;
 output [7:0]	w_mux1;
 wire w_control_exception_exe;
 
@@ -163,13 +169,19 @@ DMEM DMEM (
 	.DMEM_mem_read(w_control_mem_mem[0]),
 	.DMEM_data_out(w_mem_data)
 );
+DATA_SEL DATA_SEL(
+	.datamem_in(w_mem_data),
+	.control_datamem(w_control_datamem_mem),
+	.datamem_out(w_mem_datasel)
+);
 CONTROL CONTROL (
 	.opcode(w_inst_val_id),
 	.control_exe(w_control_exe),
 	.control_mem(w_control_mem),
 	.control_wb(w_control_wb),
 	.control_jump(w_control_jump),
-	.control_exception(w_control_exception)
+	.control_exception(w_control_exception),
+	.control_out_datamem(w_control_datamem)
 );
 SIGN_EXTEND SIGN_EXTEND(
 	.in(w_inst_val_id[15:0]),
@@ -203,6 +215,7 @@ REG_ID_EXE REG_ID_EXE(
 	.control_mem_in(w_control_mem),
 	.control_wb_in(w_control_wb),
 	.control_exception_in(w_control_exception),
+	.control_datamem_in(w_control_datamem),
 	.alu_op_in(w_inst_val_id[31:26]),
 
 	.read_data_1_in(w_read_data1_shamt),
@@ -215,6 +228,7 @@ REG_ID_EXE REG_ID_EXE(
 	.control_exe_out(w_control_exe_exe),
 	.control_mem_out(w_control_mem_exe),
 	.control_wb_out(w_control_wb_exe),
+	.control_datamem_out(w_control_datamem_exe),
 	.alu_op_out(w_alu_op_exe),
 	.control_exception_out(w_control_exception_exe),
 	.pc_out(w_inst_address_exe),
@@ -237,6 +251,7 @@ REG_EXE_MEM REG_EXE_MEM (
 	.ALU_result_in(w_alu_result),
 	.read_data_2_in(w_read_data2_exe),
 	.reg_dst_address_in(w_regDest),
+	.control_datamem_in(w_control_datamem_exe),
 	
 	.control_mem_out(w_control_mem_mem),
 	.control_wb_out(w_control_wb_mem),
@@ -244,13 +259,14 @@ REG_EXE_MEM REG_EXE_MEM (
 	.ALU_status_out(w_alu_status_mem),
 	.ALU_result_out(w_alu_result_mem),
 	.read_data_2_out(w_read_data2_mem),
-	.reg_dst_address_out(w_regDest_mem)
+	.reg_dst_address_out(w_regDest_mem),
+	.control_datamem_out(w_control_datamem_mem)
 );
 REG_MEM_WB REG_MEM_WB (
 	.CLK(SYS_clk),
 	.RESET(SYS_reset),
 	.control_wb_in(w_control_wb_mem),
-	.read_data_in(w_mem_data),
+	.read_data_in(w_mem_datasel),
 	.ALU_result_in(w_alu_result_mem),
 	.reg_dst_address_in(w_regDest_mem),
 	
@@ -310,12 +326,18 @@ SHIFT_LEFT_2 SL_1 (
 	.in(w_sign_extend_exe),
 	.out(w_shift_left1)
 );
-ADDER ADDER_01 (
+
+ADDER ADDER_0 (
 	.in0(w_inst_address),
 	.in1(8'd4),
 	.out(w_inst_adder0)
 );
-// Can xem lai cho nay, 1 cai 8 bit 1 cai 32 bit ?
+
+ADDER ADDER_JUMP (
+	.in0(w_inst_address_id[7:0]),
+	.in1(w_shift_left0[7:0]),
+	.out(w_adder_jump)
+);
 ADDER ADDER_1 (
 	.in0(w_shift_left1[7:0]),
 	.in1(w_inst_address_exe),

@@ -85,7 +85,7 @@ module t_SYSTEM;
 	end
 	initial begin
 		rst=1;
-		pc=8'd0;
+		pc=8'd4;
 		#5 rst=0;
 		#5 rst=1;
 		#5 load = 1;

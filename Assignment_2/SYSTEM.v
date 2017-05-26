@@ -6,84 +6,135 @@ module SYSTEM (
 	SYS_pc_val,
 	SYS_output_sel,
 	SYS_leds,
-	hex1,
-	hex2
+	w_inst_adder0,
+	
+	w_inst_address,
+	w_inst_val,
+	w_inst_val_id,
+	w_read_data1,
+	w_read_data2,
+	w_sign_extend,
+	
+	w_control_exe,
+	w_control_mem,
+	w_control_wb,
+	
+	w_control_exe_exe,
+	w_control_mem_exe,
+	w_control_wb_exe,
+	w_alu_op_exe,
+	w_read_data1_exe,
+	w_read_data2_exe,
+	w_sign_extend_exe,
+	w_rt_exe,
+	w_rd_exe,
+	w_inst_address_exe,
+	
+	w_alu_result,
+	w_alu_status,
+	w_alu_control,
+	w_mux2,
+	w_mux1,
+	w_mux0,
+	w_mux4,
+	
+	w_control_mem_mem,
+	w_control_wb_mem,
+	w_inst_address_mem,
+	w_alu_status_mem,
+	w_alu_result_mem,
+	w_read_data2_mem,
+	w_regDest_mem,
+	
+	w_mem_data,
+	
+	w_control_wb_wb,
+	w_mem_data_wb,
+	w_alu_result_wb,
+	w_regDest_wb,
+	w_control_jump,
+	
+	w_exception,
+	w_control_exception,
+	w_read_data1_shamt,
+	w_adder_jump
 );
 
 input SYS_clk, SYS_reset, SYS_load,CLK_50;
 input [7:0] SYS_pc_val, SYS_output_sel;
 
 output reg [26:0] SYS_leds;
-output [6:0] hex1, hex2;
+
 
 // Khoi IF
-wire  [31:0] w_inst_val;
-wire  [7:0]	 w_inst_address;
-wire  [7:0]	w_inst_adder0;
+output  [31:0] w_inst_val;
+output  [7:0] 	w_inst_address;
+output  [7:0]		w_inst_adder0;
 reg [7:0] w_mux1_or_val_in;
 // Khoi ID
-wire [31:0] w_inst_val_id,
+output [31:0] w_inst_val_id,
 				w_read_data1,
 				w_read_data2,
 				w_sign_extend;
 wire [7:0] 	w_inst_address_id,w_inst_adder0_check;
 wire [4:0]	w_rt,
 				w_rd;
-wire [2:0] 	w_control_mem;
-wire [3:0]	w_control_exe;
-wire [1:0] 	w_control_wb;
-wire 	w_control_jump;
-wire	w_control_exception;
-wire [1:0] w_control_datamem;
+output [2:0] 	w_control_mem;
+output [3:0] w_control_exe;
+output [1:0] 	w_control_wb;
+output 			w_control_jump;
+output 				w_control_exception;
+wire [1:0] w_control_datamem, w_control_out_reg2;
+wire [31:0] w_out_sel_read_data2;
 // Khoi EXE
 wire [31:0] w_regDest,
 			//	w_read_data1_exe,
 			//	w_read_data2_exe,
 			//	w_sign_extend_exe,
 				w_shift_left1;
-wire [31:0] w_mux2;
-wire [31:0]	w_alu_result;
-wire [31:0] w_read_data1_exe,
-				w_read_data2_exe,
-				w_sign_extend_exe;
-wire [7:0]	w_inst_adder1;
-wire [7:0] 	w_inst_address_exe;
-wire [7:0]	w_alu_status;
-wire [5:0]	w_alu_op_exe;
-wire [4:0]	w_rt_exe,
+output[31:0]				w_mux2;
+output [31:0]				w_alu_result;
+output [31:0] w_read_data1_exe,
+					w_read_data2_exe,
+					w_sign_extend_exe;
+wire [7:0]				w_inst_adder1;
+output [7:0] w_inst_address_exe;
+output [7:0]		w_alu_status;
+output [5:0]	w_alu_op_exe;
+output [4:0]	w_rt_exe,
 				w_rd_exe;
-wire [3:0] 	w_control_exe_exe;
-wire [3:0]	w_alu_control;
-wire [2:0] 	w_control_mem_exe;
-wire [1:0] 	w_control_wb_exe;
+output [3:0] 	w_control_exe_exe;
+output	[3:0]			w_alu_control;
+output [2:0] 	w_control_mem_exe;
+output [1:0] 	w_control_wb_exe;
 wire 			w_alu_exception;
-wire			w_exception;
-wire [1:0] 	w_control_datamem_exe;
+output		w_exception;
+wire [1:0] w_control_datamem_exe;
 // Khoi MEM
-wire [31:0] w_read_data2_mem;
-wire [31:0]	w_mem_data;
-wire [31:0] w_alu_result_mem;
-wire [7:0] 	w_alu_status_mem;
-wire [7:0]	w_ins_address_mem;
-wire [4:0]	w_regDest_mem;
-wire  [2:0]	w_control_mem_mem;
-wire [1:0]	w_control_wb_mem;
-wire [7:0]	w_inst_address_mem;
+output  [31:0] w_read_data2_mem;
+output [31:0]				w_mem_data;
+output [31:0] w_alu_result_mem;
+output [7:0] 	w_alu_status_mem;
+wire [7:0]				w_ins_address_mem;
+output [4:0]	w_regDest_mem;
+output  [2:0]	w_control_mem_mem;
+output [1:0]	w_control_wb_mem;
+output [7:0] w_inst_address_mem;
 wire			w_branch;
 wire [31:0] w_mem_datasel;
-wire [1:0]	w_control_datamem_mem;
+wire [1:0] w_control_datamem_mem;
 // Khoi WB
-wire [31:0] w_alu_result_wb;
-wire [31:0]	w_mux4;
-wire [31:0] w_mem_data_wb;
-wire [4:0]	w_regDest_wb;
-wire [1:0] 	w_control_wb_wb;
+output  [31:0] w_alu_result_wb;
+output [31:0]		w_mux4;
+output [31:0] w_mem_data_wb;
+output  [4:0]	w_regDest_wb;
+output [1:0] 	w_control_wb_wb;
 //	Other
-wire [7:0] 	w_adder_jump;
-wire [31:0] w_read_data1_shamt;
-wire [7:0]	w_mux0;
+output [7:0] w_adder_jump;
+output [31:0] w_read_data1_shamt;
+output [7:0]				w_mux0;
 wire [31:0] w_shift_left0;
-wire [7:0]	w_mux1;
+output [7:0]	w_mux1;
 wire w_control_exception_exe;
 
 
@@ -131,7 +182,13 @@ CONTROL CONTROL (
 	.control_wb(w_control_wb),
 	.control_jump(w_control_jump),
 	.control_exception(w_control_exception),
-	.control_out_datamem(w_control_datamem)
+	.control_out_datamem(w_control_datamem),
+	.control_out_reg2(w_control_out_reg2)
+);
+DATA_SEL_REG2 DATA_SEL_REG2(
+	.data_in(w_read_data2),
+	.data_sel(w_control_out_reg2),
+	.data_out(w_out_sel_read_data2)
 );
 SIGN_EXTEND SIGN_EXTEND(
 	.in(w_inst_val_id[15:0]),
@@ -284,7 +341,7 @@ ADDER ADDER_0 (
 );
 
 ADDER ADDER_JUMP (
-	.in0(w_inst_address_id[7:0]),
+	.in0(w_inst_address_id[7:0]-4),
 	.in1(w_shift_left0[7:0]),
 	.out(w_adder_jump)
 );
@@ -304,8 +361,8 @@ EPC EPC(
 	.out1(hex1),
 	.out2(hex2)
 );
-always @(*) begin
-	case(SYS_output_sel[7:0])
+/*always @(*) begin
+	case(SYS_wire_sel[7:0])
 		8'b00000001: SYS_leds = w_inst_val	;
 		8'b00000010: SYS_leds = w_read_data1;
 		8'b00010010: SYS_leds = w_read_data2;
@@ -327,6 +384,6 @@ always @(*) begin
 		8'b10000000: SYS_leds = w_inst_adder0;
 		default : SYS_leds = 27'd0;
 	endcase
-end
+end*/
 		
 endmodule

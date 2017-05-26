@@ -298,7 +298,7 @@ always@(*) begin
 			RegWrite = 0;
 			ALUsrc = 1;
 			Exception = 0;
-			ALUop = 2'b01;
+			ALUop = 2'bxx;
 			Mem2Reg = 1'bx;
 			MemWrite = 0;
 			MemRead = 0;

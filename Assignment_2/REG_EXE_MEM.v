@@ -59,12 +59,12 @@ always@(posedge CLK or negedge RESET) begin
 	end
 end
 
-always @(*) begin
+always @(negedge CLK or negedge RESET) begin
 	if(!RESET)
-		check = 0;
+		check <= 0;
 	else if( exception_disable)
-		check = 1;
-	else check = check;
+		check <= 1;
+	else check <= check;
 end
 
 

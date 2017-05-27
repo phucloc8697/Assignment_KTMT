@@ -74,6 +74,23 @@ always@(*) begin
 			data_mem = 2'd0;
 			reg2 = 2'd3;
 		end
+		// addi
+		6'd28: begin
+			RegDst = 1;
+			RegWrite = 1;
+			ALUsrc = 0;
+			ALUop = 2'b10;
+			Mem2Reg = 1;
+			MemWrite = 0;
+			MemRead = 0;
+			Branch = 0;
+			Jump = 0;
+			if( opcode[15:11] ==5'd0)
+				Exception = 1;
+			else Exception = 0;
+			data_mem = 2'd0;
+			reg2 = 2'd3;
+		end
 		// lbu
 		6'd36: begin
 			RegDst = 0;

@@ -46,9 +46,9 @@ always@(posedge CLK or negedge RESET) begin
 		control_datamem_out <= 0;
 	end
 	else begin 
-		if(!check)
-			control_mem_out <= control_mem_in;
-		else control_mem_out <= 3'd0;
+		if(check) control_mem_out <= 3'd0;
+		else if (exception_disable) control_mem_out <= 3'd0;
+		else 	control_mem_out <= control_mem_in;
 		control_wb_out <= control_wb_in;
 		branch_address_out <= branch_address_in;
 		ALU_result_out <= ALU_result_in;

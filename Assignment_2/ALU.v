@@ -96,19 +96,19 @@ module ALU (
 			ALU_result=ALU_operand_1|ALU_operand_2;		// phep or
 		end
 		else if(ALU_control==4'b0111) begin												// phep so sanh
-			if(ALU_operand_1[31]==1&&ALU_operand_1[2]==1) begin
+			if(ALU_operand_1[31]==1&&ALU_operand_2[31]==1) begin
 				if(ALU_operand_1>ALU_operand_2)
 					ALU_result = 32'd1;
 				else ALU_result = 32'd0;
 			end
-			else if(ALU_operand_1[31]==0&&ALU_operand_1[2]==0) begin
+			else if(ALU_operand_1[31]==0&&ALU_operand_2[31]==0) begin
 				if(ALU_operand_1<ALU_operand_2)
 					ALU_result = 32'd1;
 				else ALU_result = 32'd0;
 			end
-			else if(ALU_operand_1[31]==0&&ALU_operand_1[2]==1)
+			else if(ALU_operand_1[31]==0&&ALU_operand_2[31]==1)
 				ALU_result = 32'd0;
-			else if(ALU_operand_1[31]==1&&ALU_operand_1[2]==0)
+			else if(ALU_operand_1[31]==1&&ALU_operand_2[31]==0)
 				ALU_result = 32'd1;
 		end
 		else if(ALU_control==4'b1100) begin

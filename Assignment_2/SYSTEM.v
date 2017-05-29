@@ -7,14 +7,15 @@ module SYSTEM (
 	SYS_output_sel,
 	SYS_leds,
 	hex1,
-	hex2
+	hex2,
+	hex3
 );
 
 input SYS_clk, SYS_reset, SYS_load,CLK_50;
 input [7:0] SYS_pc_val, SYS_output_sel;
 
 output reg [26:0] SYS_leds;
-output [6:0] hex1, hex2;
+output [6:0] hex1, hex2,hex3;
 
 // Khoi IF
 wire  [31:0] w_inst_val;
@@ -309,7 +310,8 @@ EPC EPC(
 	.in(w_inst_adder0),
 	.reset(SYS_reset),
 	.out1(hex1),
-	.out2(hex2)
+	.out2(hex2),
+	.out3(hex3)
 );
 always @(*) begin
 	case(SYS_output_sel[7:0])
